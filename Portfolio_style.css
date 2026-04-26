@@ -176,17 +176,13 @@ header {
 }
 /* Hero */
 .hero {
-  padding: 100px 20px;
-  color: white;
-  background: linear-gradient(to right, black, rgba(0,0,65,0.75), black);
   position: relative;
   padding: 100px 20px;
   color: white;
   background: linear-gradient(to right, black, rgba(0,0,65,0.75), black),
     url("Watermark.png") no-repeat center;
-  background-size: 500px;
-  background-size: 900px;
-  background-position: center;
+  background-size: 425px;
+  background-position: right;
 }
 
 .hero-container {
@@ -770,7 +766,6 @@ header {
   opacity: 0;
   transform: scale(0.85);
   border-radius: 50%;
-  box-shadow: 0 0 25px rgb(0, 0, 65);
 }
 
 /* when JS adds .animate this runs for 1s */
