@@ -221,6 +221,7 @@ color:#00f5ff;
 
 }
 
+
 /* =======================
 HERO
 ======================= */
@@ -238,6 +239,8 @@ align-items:center;
 text-align:center;
 
 padding:120px 10%;
+
+
 
 }
 
@@ -1854,6 +1857,27 @@ word-break:break-word;
     z-index: 999999;
 
     overflow: hidden;
+    transition:
+
+        opacity .9s ease,
+
+        transform 1.2s ease,
+
+        filter 1.2s ease;
+}
+#loader{
+
+    transition:
+        opacity .9s ease,
+        transform .9s ease,
+        filter .9s ease;
+
+}
+
+#website.loaded{
+
+    animation:websiteReveal 1.8s ease forwards;
+
 }
 
 .loader-content{

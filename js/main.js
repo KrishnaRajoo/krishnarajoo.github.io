@@ -174,98 +174,77 @@ counters.forEach(c=>observer.observe(c));
 LOADER
 =========================*/
 
-const loader=document.getElementById("loader");
+/*=========================
+LOADER
+=========================*/
 
-const progress=document.querySelector(".loader-progress");
+const loader = document.getElementById("loader");
+const website = document.getElementById("website");
 
-const percent=document.getElementById("loader-percent");
+const progress = document.querySelector(".loader-progress");
+const percent = document.getElementById("loader-percent");
+const text = document.getElementById("loader-text");
 
-const text=document.getElementById("loader-text");
-
-const messages=[
-
-"Initializing Universe...",
-
-"Loading Galaxy...",
-
-"Generating Stars...",
-
-"Preparing AI Systems...",
-
-"Loading Projects...",
-
-"Establishing Connection...",
-
-"Entering Universe..."
-
+const messages = [
+    "Initializing Universe...",
+    "Loading Galaxy...",
+    "Generating Stars...",
+    "Preparing AI Systems...",
+    "Loading Projects...",
+    "Establishing Connection...",
+    "Entering Universe..."
 ];
 
-let value=0;
+let value = 0;
 
-const loading=setInterval(()=>{
+const loading = setInterval(() => {
 
-value++;
+    value++;
 
-progress.style.width=value+"%";
+    progress.style.width = value + "%";
+    percent.textContent = value + "%";
 
-percent.innerHTML=value+"%";
+    if (value < 15)
+        text.textContent = messages[0];
+    else if (value < 30)
+        text.textContent = messages[1];
+    else if (value < 45)
+        text.textContent = messages[2];
+    else if (value < 60)
+        text.textContent = messages[3];
+    else if (value < 80)
+        text.textContent = messages[4];
+    else if (value < 95)
+        text.textContent = messages[5];
+    else
+        text.textContent = messages[6];
 
-if(value<15){
+    if (value >= 100) {
 
-text.innerHTML=messages[0];
+        clearInterval(loading);
 
-}
+        // Keep the completed loader visible
+        setTimeout(() => {
 
-else if(value<30){
+            loader.style.opacity = "0";
+            loader.style.transform = "scale(1.05)";
+            loader.style.filter = "blur(10px)";
 
-text.innerHTML=messages[1];
+            // Wait for fade-out animation
+            setTimeout(() => {
 
-}
+                loader.style.display = "none";
 
-else if(value<45){
+                document.body.classList.add("loaded");
 
-text.innerHTML=messages[2];
+                if (website) {
+                    website.classList.add("loaded");
+                }
 
-}
+            }, 900);
 
-else if(value<60){
+        }, 1200);
 
-text.innerHTML=messages[3];
+    }
 
-}
-
-else if(value<80){
-
-text.innerHTML=messages[4];
-
-}
-
-else if(value<95){
-
-text.innerHTML=messages[5];
-
-}
-
-else{
-
-text.innerHTML=messages[6];
-
-}
-
-if(value>=100){
-
-clearInterval(loading);
-
-setTimeout(()=>{
-
-loader.style.opacity="0";
-
-loader.style.visibility="hidden";
-
-loader.style.pointerEvents="none";
-
-},500);
-
-}
-
-},25);
+}, 35);
