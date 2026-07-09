@@ -9,68 +9,6 @@ glow.style.top=e.clientY+"px";
 });
 
 /* ===========================
-Typing Animation
-=========================== */
-
-const roles=[
-
-"Data Science Student",
-
-"Machine Learning Enthusiast",
-
-"Python Developer",
-
-"AI Explorer"
-
-];
-
-const typing=document.getElementById("typing");
-
-let roleIndex=0;
-
-let charIndex=0;
-
-let deleting=false;
-
-function type(){
-
-const current=roles[roleIndex];
-
-if(!deleting){
-
-typing.textContent=current.substring(0,charIndex++);
-
-if(charIndex>current.length){
-
-deleting=true;
-
-setTimeout(type,1200);
-
-return;
-
-}
-
-}else{
-
-typing.textContent=current.substring(0,charIndex--);
-
-if(charIndex<0){
-
-deleting=false;
-
-roleIndex=(roleIndex+1)%roles.length;
-
-}
-
-}
-
-setTimeout(type,deleting?40:80);
-
-}
-
-type();
-
-/* ===========================
 Navbar Scroll
 =========================== */
 
