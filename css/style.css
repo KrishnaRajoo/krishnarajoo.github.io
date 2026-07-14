@@ -1852,7 +1852,7 @@ word-break:break-word;
     justify-content: center;
     align-items: center;
 
-    background:linear-gradient(#030712,#081120);
+    background:black;
 
     z-index: 999999;
 
@@ -1908,7 +1908,7 @@ animation:float 18s infinite alternate;
 
 .loader-nebula1{
 
-background:#00f5ff;
+background:black;
 
 top:-150px;
 
@@ -1918,7 +1918,7 @@ left:-150px;
 
 .loader-nebula2{
 
-background:#7c3aed;
+background:black;
 
 bottom:-150px;
 
@@ -1988,7 +1988,7 @@ transform:translate(120px,-80px);
 
     font-family:"Orbitron",sans-serif;
 
-    color:#fff;
+    color:#00f5ff;
 
     letter-spacing:3px;
 }
