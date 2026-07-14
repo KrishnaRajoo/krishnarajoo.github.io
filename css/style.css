@@ -209,7 +209,7 @@ list-style:none;
 
 text-decoration:none;
 
-color:white;
+color:#00f5ff;
 
 transition:.4s;
 
@@ -345,7 +345,7 @@ width:28px;
 
 height:3px;
 
-background:white;
+background:#00f5ff;
 
 border-radius:5px;
 
@@ -672,7 +672,7 @@ padding:30px;
 
 border-radius:20px;
 
-text-align:center;
+align-items: center;
 
 transition:.4s;
 
@@ -1852,7 +1852,7 @@ word-break:break-word;
     justify-content: center;
     align-items: center;
 
-    background:linear-gradient(#030712,#081120); 
+    background:linear-gradient(#030712,#081120);
 
     z-index: 999999;
 

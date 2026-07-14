@@ -59,6 +59,23 @@ burger.onclick=()=>{
 nav.classList.toggle("active");
 
 };
+
+// Mobile Menu Close on Link Click
+
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+const navItems = document.querySelectorAll(".nav-links a");
+
+navItems.forEach(link => {
+
+    link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+
+        menuToggle.classList.remove("active");
+
+    });
+
+});
 /*============================
 Counter Animation
 =============================*/
