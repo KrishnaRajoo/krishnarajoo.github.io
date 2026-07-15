@@ -299,6 +299,29 @@ font-size:18px;
 margin-bottom:40px;
 
 }
+.button{
+
+display:inline-block;
+
+padding:16px 42px;
+
+border-radius:50px;
+
+text-decoration:none;
+
+background:linear-gradient(45deg,#00f5ff,#7c3aed);
+
+color:white;
+
+font-weight:600;
+
+transition:.4s;
+transform:translateY(-5px);
+
+box-shadow:0 0 10px #00f5ff;
+
+
+}
 
 .btn{
 
