@@ -173,7 +173,7 @@ justify-content:space-between;
 
 align-items:center;
 
-background:rgba(255,255,255,.05);
+background:rgba(0,0,0,.05);
 
 backdrop-filter:blur(20px);
 
@@ -181,7 +181,7 @@ padding:18px 30px;
 
 border-radius:50px;
 
-border:1px solid rgba(255,255,255,.1);
+border:1px solid rgba(0,0,0,.1);
 
 }
 
@@ -467,22 +467,6 @@ opacity:0;
 transform:translateY(20px);
 
 }
-
-}
-
-/* ===========================
-SCROLLED NAVBAR
-=========================== */
-
-header.scrolled .navbar{
-
-padding:14px 28px;
-
-background:rgba(0, 0, 0,0.5);
-
-backdrop-filter:blur(25px);
-
-box-shadow:0 0 20px rgb(0,0,0);
 
 }
 
