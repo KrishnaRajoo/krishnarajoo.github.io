@@ -98,6 +98,8 @@
 
         <li><a href="#contact">Contact</a></li>
 
+        <li><a href="#message">Message</a></li>
+
     </ul>
 
     <div class="hamburger">
@@ -1236,11 +1238,74 @@ CONTACT
     </div>
 
 </section>
+<section class="contact-form-section reveal" id="message">
+
+    <div class="section-title">
+        <span class="section-tag">
+            Send Message
+        </span>
+
+        <h2>Let's Chat</h2>
+        <p>Have a project, opportunity, or just want to say hello? Send me a message.</p>
+    </div>
+
+    <form id="contact-form" class="contact-form education-card">
+
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_subject" value="New Portfolio Message">
+
+        <div class="input-row">
+
+            <input
+                type="text"
+                name="from_name"
+                placeholder="Your Name"
+                required>
+
+            <input
+                type="email"
+                name="from_email"
+                placeholder="Your Email"
+                required>
+
+        </div>
+
+        <input
+            type="text"
+            name="subject"
+            placeholder="Subject"
+            required>
+
+        <textarea
+            name="message"
+            rows="7"
+            placeholder="Write your message..."
+            required></textarea>
+
+        <button type="submit" class="btn">
+            Send Message
+        </button>
+
+    </form>
+</section>
+<div id="toast" class="toast">
+
+    <div class="toast-icon">🚀</div>
+
+    <div class="toast-content">
+
+        <h4>Message Sent!</h4>
+
+        <p>Thank you for reaching out. I'll get back to you soon.</p>
+
+    </div>
+
+</div>
 <footer>
     <p style="text-align: center;font-family:'Inter',sans-serif;"> © Krishna Rajoo | Designed with🤍</p>
 </footer>
 
-
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="js/background.js"></script>
     <script src="js/main.js"></script>
 </div>

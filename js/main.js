@@ -1,137 +1,146 @@
-const glow = document.querySelector(".cursor-glow");
+/*==========================================
+EMAIL JS
+==========================================*/
 
-document.addEventListener("mousemove",(e)=>{
+emailjs.init("XrPPbVJz7x1zYDE4e");
 
-glow.style.left=e.clientX+"px";
 
-glow.style.top=e.clientY+"px";
+/*==========================================
+NAVBAR SCROLL
+==========================================*/
 
-});
+const header = document.querySelector("header");
 
-/* ===========================
-Navbar Scroll
-=========================== */
+if (header) {
+    window.addEventListener("scroll", () => {
+        header.classList.toggle("scrolled", window.scrollY > 50);
+    });
+}
 
-const header=document.querySelector("header");
+/*==========================================
+SCROLL REVEAL
+==========================================*/
 
-window.addEventListener("scroll",()=>{
+const reveals = document.querySelectorAll(".reveal");
 
-header.classList.toggle("scrolled",window.scrollY>50);
+function reveal() {
 
-});
+    reveals.forEach(section => {
 
-/* ===========================
-Reveal
-=========================== */
+        const top = section.getBoundingClientRect().top;
 
-const reveals=document.querySelectorAll(".reveal");
+        if (top < window.innerHeight - 120) {
 
-function reveal(){
+            section.classList.add("active");
 
-reveals.forEach(sec=>{
+        }
 
-const top=sec.getBoundingClientRect().top;
-
-if(top<window.innerHeight-120){
-
-sec.classList.add("active");
+    });
 
 }
 
-});
-
-}
-
-window.addEventListener("scroll",reveal);
+window.addEventListener("scroll", reveal);
 
 reveal();
 
-/* ===========================
-Hamburger
-=========================== */
+/*==========================================
+HAMBURGER MENU
+==========================================*/
 
-const burger=document.querySelector(".hamburger");
-
-const nav=document.querySelector(".nav-links");
-
-burger.onclick=()=>{
-
-nav.classList.toggle("active");
-
-};
-
-// Mobile Menu Close on Link Click
-
-const menuToggle = document.querySelector(".menu-toggle");
+const burger = document.querySelector(".hamburger");
 const navLinks = document.querySelector(".nav-links");
 const navItems = document.querySelectorAll(".nav-links a");
+
+if (burger && navLinks) {
+
+    burger.addEventListener("click", (e) => {
+
+        e.stopPropagation();
+
+        burger.classList.toggle("active");
+        navLinks.classList.toggle("active");
+
+    });
+
+    navLinks.addEventListener("click", (e) => {
+
+        e.stopPropagation();
+
+    });
+
+    document.addEventListener("click", () => {
+
+        navLinks.classList.remove("active");
+        burger.classList.remove("active");
+
+    });
+
+}
 
 navItems.forEach(link => {
 
     link.addEventListener("click", () => {
-        navLinks.classList.remove("active");
 
-        menuToggle.classList.remove("active");
+        if (navLinks) navLinks.classList.remove("active");
+        if (burger) burger.classList.remove("active");
 
     });
 
 });
-/*============================
-Counter Animation
-=============================*/
 
-const counters=document.querySelectorAll("[data-target]");
+/*==========================================
+COUNTER
+==========================================*/
 
-const observer=new IntersectionObserver(entries=>{
+const counters = document.querySelectorAll("[data-target]");
 
-entries.forEach(entry=>{
+const observer = new IntersectionObserver((entries) => {
 
-if(entry.isIntersecting){
+    entries.forEach(entry => {
 
-const counter=entry.target;
+        if (entry.isIntersecting) {
 
-const target=+counter.dataset.target;
+            const counter = entry.target;
 
-let count=0;
+            const target = +counter.dataset.target;
 
-const speed=target/80;
+            let count = 0;
 
-const update=()=>{
+            const speed = target / 80;
 
-count+=speed;
+            function update() {
 
-if(count<target){
+                count += speed;
 
-counter.innerText=Math.floor(count);
+                if (count < target) {
 
-requestAnimationFrame(update);
+                    counter.innerText = Math.floor(count);
 
-}else{
+                    requestAnimationFrame(update);
 
-counter.innerText=target;
+                } else {
 
-}
+                    counter.innerText = target;
 
-};
+                }
 
-update();
+            }
 
-observer.unobserve(counter);
+            update();
 
-}
+            observer.unobserve(counter);
+
+        }
+
+    });
 
 });
 
-});
+counters.forEach(counter => observer.observe(counter));
 
-counters.forEach(c=>observer.observe(c));
-/*=========================
+/*==========================================
 LOADER
-=========================*/
-
-/*=========================
-LOADER
-=========================*/
+==========================================*/
 
 const loader = document.getElementById("loader");
 const website = document.getElementById("website");
@@ -141,6 +150,7 @@ const percent = document.getElementById("loader-percent");
 const text = document.getElementById("loader-text");
 
 const messages = [
+
     "Initializing Universe...",
     "Loading Galaxy...",
     "Generating Stars...",
@@ -148,59 +158,146 @@ const messages = [
     "Loading Projects...",
     "Establishing Connection...",
     "Entering Universe..."
+
 ];
 
-let value = 0;
+if (loader && website && progress && percent && text) {
 
-const loading = setInterval(() => {
+    let value = 0;
 
-    value++;
+    const loading = setInterval(() => {
 
-    progress.style.width = value + "%";
-    percent.textContent = value + "%";
+        value++;
 
-    if (value < 15)
-        text.textContent = messages[0];
-    else if (value < 30)
-        text.textContent = messages[1];
-    else if (value < 45)
-        text.textContent = messages[2];
-    else if (value < 60)
-        text.textContent = messages[3];
-    else if (value < 80)
-        text.textContent = messages[4];
-    else if (value < 95)
-        text.textContent = messages[5];
-    else
-        text.textContent = messages[6];
+        progress.style.width = value + "%";
+        percent.textContent = value + "%";
 
-    if (value >= 100) {
+        if (value < 15)
+            text.textContent = messages[0];
+        else if (value < 30)
+            text.textContent = messages[1];
+        else if (value < 45)
+            text.textContent = messages[2];
+        else if (value < 60)
+            text.textContent = messages[3];
+        else if (value < 80)
+            text.textContent = messages[4];
+        else if (value < 95)
+            text.textContent = messages[5];
+        else
+            text.textContent = messages[6];
 
-        clearInterval(loading);
+        if (value >= 100) {
 
-        // Keep the completed loader visible
-        setTimeout(() => {
+            clearInterval(loading);
 
-            loader.style.opacity = "0";
-            loader.style.transform = "scale(1.05)";
-            loader.style.filter = "blur(10px)";
-
-            // Wait for fade-out animation
             setTimeout(() => {
 
-                loader.style.display = "none";
+                loader.style.opacity = "0";
+                loader.style.transform = "scale(1.05)";
+                loader.style.filter = "blur(10px)";
 
-                document.body.classList.add("loaded");
+                setTimeout(() => {
 
-                if (website) {
+                    loader.style.display = "none";
+
+                    document.body.classList.add("loaded");
                     website.classList.add("loaded");
-                }
 
-            }, 900);
+                }, 900);
 
-        }, 1200);
+            }, 1200);
 
-    }
+        }
 
-}, 35);
+    }, 35);
 
+}
+
+/*==========================================
+FADE RIGHT
+==========================================*/
+
+const fadeElements = document.querySelectorAll(".fade-right");
+
+const fadeObserver = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+            entry.target.classList.add("show");
+
+        }
+
+    });
+
+}, {
+
+    threshold: 0.2
+
+});
+
+fadeElements.forEach(el => fadeObserver.observe(el));
+
+/*==========================================
+EMAIL JS CONTACT FORM
+==========================================*/
+
+const form = document.getElementById("contact-form");
+
+if (form) {
+
+    form.addEventListener("submit", function (e) {
+
+        e.preventDefault();
+
+        emailjs.sendForm(
+            "service_gkgva0w",
+            "template_yqfwh9p",
+            this
+        )
+
+        .then(() => {
+
+            const popup = document.getElementById("success-popup");
+
+            if (popup) {
+
+                popup.classList.add("show");
+
+                setTimeout(() => {
+
+                    popup.classList.remove("show");
+
+                }, 3000);
+
+            } else {
+
+                const toast = document.getElementById("toast");
+
+                toast.classList.add("show");
+
+                setTimeout(() => {
+
+                    toast.classList.remove("show");
+
+                },4000);
+
+            }
+
+            form.reset();
+
+        })
+
+        .catch((error) => {
+
+            console.error(error);
+
+            alert("❌ Failed to send message.");
+
+        });
+
+    });
+
+}

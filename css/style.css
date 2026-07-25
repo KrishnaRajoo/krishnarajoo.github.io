@@ -2065,3 +2065,208 @@ transform:translate(120px,-80px);
     }
 
 }
+
+.contact-form-section{
+
+    padding:120px 10%;
+
+}
+
+.contact-form{
+
+    max-width:850px;
+
+    margin:auto;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,.04);
+
+    backdrop-filter:blur(20px);
+
+    box-shadow:0 0 30px rgba(0,245,255,.08);
+
+}
+
+.input-row{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:20px;
+
+}
+
+.contact-form input,
+.contact-form textarea{
+
+    width:100%;
+
+    margin-top:20px;
+
+    padding:16px 20px;
+
+    border-radius:14px;
+
+    border:1px solid rgba(255,255,255,.1);
+
+    background:rgba(255,255,255,.05);
+
+    color:#fff;
+
+    font-size:16px;
+
+    outline:none;
+
+    transition:.3s;
+
+}
+
+.contact-form textarea{
+
+    resize:none;
+
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+
+    border-color:#00F5FF;
+
+    box-shadow:0 0 18px rgba(0,245,255,.2);
+
+}
+
+.contact-form button{
+
+    margin-top:30px;
+
+    width:100%;
+
+}
+#success-popup{
+
+    position:fixed;
+
+    top:30px;
+    right:30px;
+
+    background:#00F5FF;
+
+    color:#050816;
+
+    padding:16px 24px;
+
+    border-radius:12px;
+
+    opacity:0;
+
+    transform:translateX(120px);
+
+    transition:.4s;
+
+    z-index:9999;
+
+}
+
+#success-popup.show{
+
+    opacity:1;
+
+    transform:translateX(0);
+
+}
+/*=========================
+SUCCESS TOAST
+=========================*/
+
+.toast{
+
+    position:fixed;
+
+    top:30px;
+    right:30px;
+
+    width:360px;
+
+    display:flex;
+    align-items:center;
+    gap:18px;
+
+    padding:18px 22px;
+
+    border-radius:18px;
+
+    background:rgba(5,8,22,.92);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(0,245,255,.25);
+
+    box-shadow:
+        0 0 25px rgba(0,245,255,.15),
+        0 0 45px rgba(124,58,237,.12);
+
+    transform:translateX(420px);
+
+    opacity:0;
+
+    transition:.6s ease;
+
+    z-index:999999;
+
+}
+
+.toast.show{
+
+    transform:translateX(0);
+
+    opacity:1;
+
+}
+
+.toast-icon{
+
+    width:55px;
+    height:55px;
+
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:26px;
+
+    background:linear-gradient(
+        135deg,
+        #00F5FF,
+        #7C3AED
+    );
+
+    color:white;
+
+    box-shadow:0 0 18px rgba(0,245,255,.35);
+
+}
+
+.toast-content h4{
+
+    color:white;
+
+    margin-bottom:6px;
+
+}
+
+.toast-content p{
+
+    color:#B8C5D6;
+
+    font-size:14px;
+
+    line-height:1.5;
+
+}
