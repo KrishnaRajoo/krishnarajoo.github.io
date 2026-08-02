@@ -248,19 +248,24 @@ const form = document.getElementById("contact-form");
 
 if (form) {
 
-    form.addEventListener("submit", function (e) {
+    form.addEventListener("submit", function(e){
 
         e.preventDefault();
 
         emailjs.sendForm(
+
             "service_gkgva0w",
+
             "template_yqfwh9p",
+
             this
+
         )
 
         .then(() => {
 
-            const popup = document.getElementById("success-popup");
+            const popup =
+                document.getElementById("transmission-popup");
 
             if (popup) {
 
@@ -270,19 +275,7 @@ if (form) {
 
                     popup.classList.remove("show");
 
-                }, 3000);
-
-            } else {
-
-                const toast = document.getElementById("toast");
-
-                toast.classList.add("show");
-
-                setTimeout(() => {
-
-                    toast.classList.remove("show");
-
-                },4000);
+                }, 4500);
 
             }
 
@@ -292,9 +285,9 @@ if (form) {
 
         .catch((error) => {
 
-            console.error(error);
+            console.error("EmailJS Error:", error);
 
-            alert("❌ Failed to send message.");
+            alert("Unable to send transmission. Please try again.");
 
         });
 

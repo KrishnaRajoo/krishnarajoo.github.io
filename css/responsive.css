@@ -331,3 +331,37 @@ font-size:20px;
     }
 
 }
+@media(max-width:600px){
+
+    #transmission-popup{
+
+        top:20px;
+
+        left:20px;
+        right:20px;
+
+        width:auto;
+
+        transform:translateY(-150px);
+
+    }
+
+    #transmission-popup.show{
+
+        transform:translateY(0);
+
+    }
+
+    .transmission-header{
+
+        font-size:9px;
+
+    }
+
+    .transmission-body{
+
+        padding:20px 16px;
+
+    }
+
+}
