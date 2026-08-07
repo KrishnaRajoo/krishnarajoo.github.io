@@ -7,1457 +7,1733 @@
 
     <title>Krishna Rajoo | Portfolio</title>
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/logo.png">
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
 
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 
+
 <body>
 
-<!-- ==========================
-        SCREEN LOADER
-=========================== -->
+    <!-- =====================================================
+         SCREEN LOADER
+    ====================================================== -->
 
-<div id="loader">
-    <canvas id="loaderCanvas"></canvas>
-    <div class="loader-nebula loader-nebula1"></div>
-    <div class="loader-nebula loader-nebula2"></div>
+    <div id="loader">
 
+        <canvas id="loaderCanvas"></canvas>
 
-    <div class="loader-content">
+        <div class="loader-nebula loader-nebula1"></div>
+        <div class="loader-nebula loader-nebula2"></div>
 
-        <img src="assets/logo.png"
-             alt="Logo"
-             class="loader-logo">
+        <div class="loader-content">
 
-        <h2 class="loader-title">
+            <img
+                src="assets/logo.png"
+                alt="Krishna Rajoo Logo"
+                class="loader-logo"
+            >
 
-            KRISHNA RAJOO
+            <h2 class="loader-title">
+                KRISHNA RAJOO
+            </h2>
 
-        </h2>
+            <p id="loader-text">
+                Initializing Universe...
+            </p>
 
-        <p id="loader-text">
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
 
-            Initializing Universe...
-
-        </p>
-
-        <div class="loader-bar">
-
-            <div class="loader-progress"></div>
-
-        </div>
-
-        <span id="loader-percent">
-
-            0%
-
-        </span>
-
-    </div>
-
-</div>
-<div id="website">
-
-    <!-- Galaxy Background -->
-    <canvas id="galaxy"></canvas>
-
-    <!-- Nebula -->
-    <div class="nebula nebula1"></div>
-    <div class="nebula nebula2"></div>
-
-    <!-- Cursor -->
-    <div class="cursor-glow"></div>
-
-    <!-- Navigation -->
-
-    <header>
-
-        <nav class="navbar">
-
-    <div class="logo">
-        KRISHNA
-    </div>
-
-    <ul class="nav-links">
-
-        <li><a href="#home">Home</a></li>
-
-        <li><a href="#about">About</a></li>
-
-        <li><a href="#skills">Skills</a></li>
-
-        <li><a href="#projects">Projects</a></li>
-
-        <li><a href="#experience">Experience</a></li>
-
-        <li><a href="#contact">Contact</a></li>
-
-        <li><a href="#message">Message</a></li>
-
-    </ul>
-
-    <div class="hamburger">
-
-        <span></span>
-        <span></span>
-        <span></span>
-
-    </div>
-
-</nav>
-
-    </header>
-
-
-    <!-- Hero -->
-
-    <section class="hero" id="home">
-    <div class="hero-content reveal">
-
-        <p class="small-title">
-
-            WELCOME TO MY UNIVERSE
-
-        </p>
-
-        <h2>Hello, I'm</h2>
-        <h1><span>KRISHNA RAJOO</span></h1>
-        <span class="button">Data Explorer | ML Enthusiast</span>
-        <br><br>
-
-        <p>
-
-            Exploring data, uncovering hidden patterns, and building intelligent systems that solve real-world problems through Machine Learning and Artificial Intelligence.
-
-        </p>
-
-        <div class="hero-buttons">
-
-            <a href="#projects" class="btn outline">
-
-                Explore Projects
-
-            </a>
-
-            <a href="assets/KrishnaRajoo_Resume.pdf" target="_blank"class="btn outline">
-
-                View My Resume
-
-            </a>
-
-        </div>
-
-    </div>
-
-    <div class="scroll-indicator">
-
-        <span></span>
-
-    </div>
-
-</section>
-<section class="about reveal" id="about">
-
-    <div class="section-title">
-
-        <span class="section-tag">
-            MISSION PROFILE
-        </span>
-
-        <h2>About Me</h2>
-
-    </div>
-
-    <div class="about-container">
-
-        <div class="profile-card">
-
-
-            <img src="assets/My_photo.png" alt="Logo"class="loader-logo">
-
-
-            <h3>
-
-                Krishna Rajoo
-
-            </h3>
-
-            <span>
-
-                Student Data Science
-
+            <span id="loader-percent">
+                0%
             </span>
 
-            <div class="status">
-
-                <span class="dot"></span>
-
-                Available for Opportunities
-
-            </div>
-
-        </div>
-
-        <div class="about-content">
-
-            <p>
-
-                I am a fourth-year Data Science student passionate about Machine Learning, Artificial Intelligence, Data Analytics, and Full Stack Development. I enjoy building intelligent applications that solve real-world problems using data-driven solutions.
-
-            </p>
-
-            <div class="stats">
-
-                <div class="stat">
-
-                    <h3 data-target="13">0</h3>
-
-                    <p>Projects</p>
-
-                </div>
-
-                <div class="stat">
-
-                    <h3 data-target="15">0</h3>
-
-                    <p>Power BI Dashboards</p>
-
-                </div>
-
-                <div class="stat">
-
-                    <h3 data-target="2">0</h3>
-
-                    <p>Internship</p>
-
-                </div>
-
-                <div class="stat">
-
-                    <h3 data-target="4">0</h3>
-
-                    <p>Certificates</p>
-
-                </div>
-                <div class="stat">
-
-                    <h3 data-target="16">0</h3>
-
-                    <p>GitHub Repositories</p>
-
-                </div>
-                <div class="stat">
-
-                    <h3 data-target="8.38">0</h3>
-
-                    <p>Current GPA</p>
-
-                </div>
-
-            </div>
-
         </div>
 
     </div>
 
-</section>
-<!-- =========================
-     SKILLS SECTION
-========================= -->
 
-<section class="skills section reveal" id="skills">
+    <!-- =====================================================
+         MAIN WEBSITE
+    ====================================================== -->
 
-    <div class="section-title">
+    <div id="website">
 
-        <span class="section-tag">
-            TECH STACK
-        </span>
+        <!-- Galaxy Background -->
+        <canvas id="galaxy"></canvas>
 
-        <h2>
-            Technologies I Work With
-        </h2>
+        <!-- Nebula Effects -->
+        <div class="nebula nebula1"></div>
+        <div class="nebula nebula2"></div>
 
-        <p>
-            A collection of programming languages, frameworks, tools, and technologies
-            that I use to build intelligent data-driven applications.
-        </p>
+        <!-- Cursor Glow -->
+        <div class="cursor-glow"></div>
 
-    </div>
 
-    <div class="skills-grid">
+        <!-- =================================================
+             NAVIGATION
+        ================================================== -->
 
-        <!-- Programming -->
+        <header>
 
-        <div class="skill-card">
+            <nav class="navbar">
 
-            <h3>🐍 Programming</h3>
+                <div class="logo">
+                    KRISHNA
+                </div>
 
-            <div class="skill-list">
+                <ul class="nav-links">
 
-                <span>Python</span>
-                <span>SQL</span>
-                <span>R</span>
-                <span>Java</span>
-                <span>C</span>
+                    <li>
+                        <a href="#home">Home</a>
+                    </li>
 
-            </div>
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
 
-        </div>
+                    <li>
+                        <a href="#skills">Skills</a>
+                    </li>
 
-        <!-- Data Analytics -->
+                    <li>
+                        <a href="#projects">Projects</a>
+                    </li>
 
-        <div class="skill-card">
+                    <li>
+                        <a href="#experience">Experience</a>
+                    </li>
 
-            <h3>📊 Data Analytics</h3>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
 
-            <div class="skill-list">
+                    <li>
+                        <a href="#message">Message</a>
+                    </li>
 
-                <span>Pandas</span>
-                <span>NumPy</span>
-                <span>EDA</span>
-                <span>ETL</span>
-                <span>Data Cleaning</span>
-                <span>Data Modeling</span>
-                <span>Business Analytics</span>
-                <span>Visualization</span>
+                </ul>
 
-            </div>
+                <div class="hamburger">
 
-        </div>
+                    <span></span>
+                    <span></span>
+                    <span></span>
 
-        <!-- Machine Learning -->
+                </div>
 
-        <div class="skill-card">
+            </nav>
 
-            <h3>🤖 Machine Learning</h3>
+        </header>
 
-            <div class="skill-list">
 
-                <span>Scikit-Learn</span>
-                <span>Regression</span>
-                <span>Classification</span>
-                <span>Clustering</span>
-                <span>Model Evaluation</span>
-                <span>Predictive Analytics</span>
+        <!-- =================================================
+             HERO SECTION
+        ================================================== -->
 
-            </div>
+        <section class="hero" id="home">
 
-        </div>
+            <div class="hero-content reveal">
 
-        <!-- Business Intelligence -->
+                <p class="small-title">
+                    WELCOME TO MY UNIVERSE
+                </p>
 
-        <div class="skill-card">
+                <h2>
+                    Hello, I'm
+                </h2>
 
-            <h3>📈 Business Intelligence</h3>
+                <h1>
+                    <span>KRISHNA RAJOO</span>
+                </h1>
 
-            <div class="skill-list">
+                <span class="button">
+                    Data Explorer | ML Enthusiast
+                </span>
 
-                <span>Power BI</span>
-                <span>Dashboard Design</span>
-                <span>Reporting Automation</span>
+                <br>
+                <br>
 
-            </div>
+                <p>
+                    Exploring data, uncovering hidden patterns, and building
+                    intelligent systems that solve real-world problems through
+                    Machine Learning and Artificial Intelligence.
+                </p>
 
-        </div>
+                <div class="hero-buttons">
 
-        <!-- Web -->
+                    <a href="#projects" class="btn outline">
+                        Explore Projects
+                    </a>
 
-        <div class="skill-card">
+                    <a
+                        href="assets/KrishnaRajoo_Resume.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn outline"
+                    >
+                        View My Resume
+                    </a>
 
-            <h3>🌐 Web Development</h3>
-
-            <div class="skill-list">
-
-                <span>Streamlit</span>
-                <span>Flask</span>
-                <span>HTML5</span>
-                <span>CSS3</span>
-                <span>JavaScript</span>
-
-            </div>
-
-        </div>
-
-        <!-- Tools -->
-
-        <div class="skill-card">
-
-            <h3>⚙ Developer Tools</h3>
-
-            <div class="skill-list">
-
-                <span>Git</span>
-                <span>GitHub</span>
-                <span>Jupyter Notebook</span>
-                <span>VS Code</span>
-                <span>MS Office</span>
-                <span>MS Excel</span>
+                </div>
 
             </div>
 
-        </div>
+            <div class="scroll-indicator">
+                <span></span>
+            </div>
 
-    </div>
+        </section>
 
-</section>
-<!-- ==========================
-     FEATURED PROJECTS
-========================== -->
 
-<section class="projects section reveal" id="projects">
+        <!-- =================================================
+             ABOUT SECTION
+        ================================================== -->
 
-    <div class="section-title">
+        <section class="about reveal" id="about">
 
-        <span class="section-tag">MISSION CONTROL</span>
+            <div class="section-title">
 
-        <h2>Featured Projects</h2>
+                <span class="section-tag">
+                    MISSION PROFILE
+                </span>
 
-        <p>
-            Real-world applications built using Data Science,
-            Machine Learning, Data Analytics and Web Technologies.
-        </p>
-
-    </div>
-
-    <div class="projects-grid">
-
-        <!-- Project -->
-
-        <div class="project-card">
-
-            <div class="project-status">
-
-                <span class="status-dot"></span>
-
-                Completed
+                <h2>
+                    About Me
+                </h2>
 
             </div>
 
-            <h3>Movie Industry Analytics And Trend Analysis Using NLP And BI</h3>
 
-            <p>
-                Analyzed 10,000+ movies to discover rating trends,
-                audience preferences and sentiment using NLP.
-            </p>
+            <div class="about-container">
 
-            <div class="project-tech">
+                <!-- Profile -->
+                <div class="profile-card">
 
-                <span>Python</span>
-                <span>Pandas</span>
-                <span>NumPy</span>
-                <span>NLP</span>
-
-            </div>
-
-            <div class="project-buttons">
-
-                <a href="https://github.com/KrishnaRajoo/Movie-Industry-Analytics-And-Trend-Analysis-Using-NLP-And-BI">GitHub</a>
-
-
-            </div>
-
-        </div>
-
-        <!-- Project -->
-
-        <div class="project-card">
-
-            <div class="project-status">
-
-                <span class="status-dot"></span>
-
-                Completed
-
-            </div>
-
-            <h3>Credit Card Fraud Detection System</h3>
-
-            <p>
-
-                An intelligent machine learning system that detects fraudulent credit card transactions using
-                advanced classification algorithms and provides transparent AI explanations using SHAP.
-
-
-            </p>
-
-            <div class="project-tech">
-
-                <span>Python</span>
-                <span>Render</span>
-                <span>Flask</span>
-                <span>SHAP</span>
-                <span>Random Forest</span>
-
-            </div>
-
-            <div class="project-buttons">
-
-                <a href="https://github.com/KrishnaRajoo/Credit-Card-Fraud-Detection-System">GitHub</a>
-                <a href="https://credit-card-fraud-detection-system-c8f4.onrender.com/">Live Demo</a>
-
-            </div>
-
-        </div>
-
-        <!-- Project -->
-
-        <div class="project-card">
-
-            <div class="project-status">
-
-                <span class="status-dot"></span>
-
-                Completed
-
-            </div>
-
-            <h3>Explainable-AI Diabetes Prediction System </h3>
-
-            <p>
-
-                An AI-based diabetes risk prediction system using Machine Learning and Explainable AI.
-
-            </p>
-
-            <div class="project-tech">
-
-                <span>Python</span>
-                <span>Scikit-Learn</span>
-                <span>Flask</span>
-                <span>HTML</span>
-                <span>StreamLit</span>
-
-            </div>
-
-            <div class="project-buttons">
-
-                <a href="https://github.com/KrishnaRajoo/Explainable-AI-Diabetes-Prediction-System">GitHub</a>
-
-                <a href="https://aidiabetes-predictor.streamlit.app">Live Demo</a>
-
-            </div>
-
-        </div>
-
-        <!-- Project -->
-
-        <div class="project-card">
-
-            <div class="project-status">
-
-                <span class="status-dot"></span>
-
-                Completed
-
-            </div>
-
-            <h3>Smart Student Data Management And Analytics System</h3>
-
-            <p>
-
-                A full-stack Student Analytics System developed using Flask, MySQL, and Chart.js to simplify student management, attendance tracking, teacher management, and academic analytics.
-
-            </p>
-
-            <div class="project-tech">
-
-                <span>Python</span>
-                <span>MySQL</span>
-                <span>Render</span>
-                <span>Flask</span>
-
-            </div>
-
-            <div class="project-buttons">
-
-                <a href="https://github.com/KrishnaRajoo/Smart-Student-Data-Management-And-Analytics-System">GitHub</a>
-
-                <a href="https://smart-student-data-management-and.onrender.com">Live Demo</a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-<!--==========================
-EXPERIENCE
-===========================-->
-
-<section class="experience reveal" id="experience">
-    <div class="section-title">
-
-        <span class="section-tag">
-            PROFESSIONAL EXPERIENCE
-        </span>
-
-        <h2>
-            Industry Experience
-        </h2>
-
-        <p>
-            Applying data analytics, business intelligence and visualization
-            skills to solve real business challenges.
-        </p>
-
-    </div>
-    <div class="experience-container">
-
-        <div class="experience-card">
-
-            <div class="experience-header">
-
-                <div>
-
-                    <span class="experience-badge">
-                        DATA SCIENCE INTERN
-                    </span>
+                    <img
+                        src="assets/My_photo.png"
+                        alt="Krishna Rajoo"
+                        class="loader-logo"
+                    >
 
                     <h3>
-                        CodeVedX
+                        Krishna Rajoo
                     </h3>
-
-                    <h4>
-                        Remote Internship
-                    </h4>
-
-                </div>
-
-                <div class="experience-duration">
 
                     <span>
-                        July 2026 – Present
+                        Student Data Science
                     </span>
 
-                    <small>
-                        8 Weeks
-                    </small>
+                    <div class="status">
+
+                        <span class="dot"></span>
+
+                        Available for Opportunities
+
+                    </div>
 
                 </div>
 
-            </div>
 
-            <div class="experience-timeline">
+                <!-- About Content -->
+                <div class="about-content">
 
-                <div class="timeline-point">
-                    <span></span>
                     <p>
-                        Developing 5 end-to-end Machine Learning projects using <strong>Python, Scikit-learn, Pandas, and NumPy</strong>, covering classification, regression, and predictive analytics. 
+                        I am a fourth-year Data Science student passionate about
+                        Machine Learning, Artificial Intelligence, Data Analytics,
+                        and Full Stack Development. I enjoy building intelligent
+                        applications that solve real-world problems using
+                        data-driven solutions.
                     </p>
+
+
+                    <div class="stats">
+
+                        <div class="stat">
+                            <h3 data-target="13">0</h3>
+                            <p>Projects</p>
+                        </div>
+
+                        <div class="stat">
+                            <h3 data-target="15">0</h3>
+                            <p>Power BI Dashboards</p>
+                        </div>
+
+                        <div class="stat">
+                            <h3 data-target="2">0</h3>
+                            <p>Internship</p>
+                        </div>
+
+                        <div class="stat">
+                            <h3 data-target="4">0</h3>
+                            <p>Certificates</p>
+                        </div>
+
+                        <div class="stat">
+                            <h3 data-target="16">0</h3>
+                            <p>GitHub Repositories</p>
+                        </div>
+
+                        <div class="stat">
+                            <h3 data-target="8.38">0</h3>
+                            <p>Current GPA</p>
+                        </div>
+
+                    </div>
+
                 </div>
 
-                <div class="timeline-point">
-                    <span></span>
-                    <p>
-                    Building interactive Flask/Streamlit web applications by implementing data preprocessing, model training, evaluation, and real-time prediction workflows. 
-                    </p>
-                </div>
             </div>
 
-            <div class="experience-skills">
+        </section>
 
-                <span>Machine Learning</span>
-                <span>Python</span>
-                <span>Data Preprocessing</span>
-                <span>EDA</span>
-                <span>Flask</span>
-                <span>Streamlit</span>
-                <span>Random Forest</span>
-                <span>Linear Regression</span>
-                <span>Decision Tree</span>
+
+        <!-- =================================================
+             SKILLS SECTION
+        ================================================== -->
+
+        <section class="skills section reveal" id="skills">
+
+            <div class="section-title">
+
+                <span class="section-tag">
+                    TECH STACK
+                </span>
+
+                <h2>
+                    Technologies I Work With
+                </h2>
+
+                <p>
+                    A collection of programming languages, frameworks, tools,
+                    and technologies that I use to build intelligent
+                    data-driven applications.
+                </p>
 
             </div>
 
-        </div>
 
-    </div>
-    <div class="experience-container">
+            <div class="skills-grid">
 
-        <div class="experience-card">
-
-            <div class="experience-header">
-
-                <div>
-
-                    <span class="experience-badge">
-                        DATA ANALYST INTERN
-                    </span>
+                <!-- Programming -->
+                <div class="skill-card">
 
                     <h3>
-                        Aneja Sons, Platinum Store
+                        🐍 Programming
+                    </h3>
+
+                    <div class="skill-list">
+
+                        <span>Python</span>
+                        <span>SQL</span>
+                        <span>R</span>
+                        <span>Java</span>
+                        <span>C</span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Data Analytics -->
+                <div class="skill-card">
+
+                    <h3>
+                        📊 Data Analytics
+                    </h3>
+
+                    <div class="skill-list">
+
+                        <span>Pandas</span>
+                        <span>NumPy</span>
+                        <span>EDA</span>
+                        <span>ETL</span>
+                        <span>Data Cleaning</span>
+                        <span>Data Modeling</span>
+                        <span>Business Analytics</span>
+                        <span>Visualization</span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Machine Learning -->
+                <div class="skill-card">
+
+                    <h3>
+                        🤖 Machine Learning
+                    </h3>
+
+                    <div class="skill-list">
+
+                        <span>Scikit-Learn</span>
+                        <span>Regression</span>
+                        <span>Classification</span>
+                        <span>Clustering</span>
+                        <span>Model Evaluation</span>
+                        <span>Predictive Analytics</span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Business Intelligence -->
+                <div class="skill-card">
+
+                    <h3>
+                        📈 Business Intelligence
+                    </h3>
+
+                    <div class="skill-list">
+
+                        <span>Power BI</span>
+                        <span>Dashboard Design</span>
+                        <span>Reporting Automation</span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Web Development -->
+                <div class="skill-card">
+
+                    <h3>
+                        🌐 Web Development
+                    </h3>
+
+                    <div class="skill-list">
+
+                        <span>Streamlit</span>
+                        <span>Flask</span>
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Developer Tools -->
+                <div class="skill-card">
+
+                    <h3>
+                        ⚙ Developer Tools
+                    </h3>
+
+                    <div class="skill-list">
+
+                        <span>Git</span>
+                        <span>GitHub</span>
+                        <span>Jupyter Notebook</span>
+                        <span>VS Code</span>
+                        <span>MS Office</span>
+                        <span>MS Excel</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             FEATURED PROJECTS
+        ================================================== -->
+
+        <section class="projects section reveal" id="projects">
+
+            <div class="section-title">
+
+                <span class="section-tag">
+                    MISSION CONTROL
+                </span>
+
+                <h2>
+                    Featured Projects
+                </h2>
+
+                <p>
+                    Real-world applications built using Data Science,
+                    Machine Learning, Data Analytics and Web Technologies.
+                </p>
+
+            </div>
+
+
+            <div class="projects-grid">
+
+                <!-- Project 1 -->
+                <div class="project-card">
+
+                    <div class="project-status">
+
+                        <span class="status-dot"></span>
+
+                        Completed
+
+                    </div>
+
+                    <h3>
+                        Movie Industry Analytics And Trend Analysis Using
+                        NLP And BI
+                    </h3>
+
+                    <p>
+                        Analyzed 10,000+ movies to discover rating trends,
+                        audience preferences and sentiment using NLP.
+                    </p>
+
+                    <div class="project-tech">
+
+                        <span>Python</span>
+                        <span>Pandas</span>
+                        <span>NumPy</span>
+                        <span>NLP</span>
+
+                    </div>
+
+                    <div class="project-buttons">
+
+                        <a
+                            href="https://github.com/KrishnaRajoo/Movie-Industry-Analytics-And-Trend-Analysis-Using-NLP-And-BI"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            GitHub
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Project 2 -->
+                <div class="project-card">
+
+                    <div class="project-status">
+
+                        <span class="status-dot"></span>
+
+                        Completed
+
+                    </div>
+
+                    <h3>
+                        Credit Card Fraud Detection System
+                    </h3>
+
+                    <p>
+                        An intelligent machine learning system that detects
+                        fraudulent credit card transactions using advanced
+                        classification algorithms and provides transparent
+                        AI explanations using SHAP.
+                    </p>
+
+                    <div class="project-tech">
+
+                        <span>Python</span>
+                        <span>Render</span>
+                        <span>Flask</span>
+                        <span>SHAP</span>
+                        <span>Random Forest</span>
+
+                    </div>
+
+                    <div class="project-buttons">
+
+                        <a
+                            href="https://github.com/KrishnaRajoo/Credit-Card-Fraud-Detection-System"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            GitHub
+                        </a>
+
+                        <a
+                            href="https://credit-card-fraud-detection-system-c8f4.onrender.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Live Demo
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Project 3 -->
+                <div class="project-card">
+
+                    <div class="project-status">
+
+                        <span class="status-dot"></span>
+
+                        Completed
+
+                    </div>
+
+                    <h3>
+                        Explainable-AI Diabetes Prediction System
+                    </h3>
+
+                    <p>
+                        An AI-based diabetes risk prediction system using
+                        Machine Learning and Explainable AI.
+                    </p>
+
+                    <div class="project-tech">
+
+                        <span>Python</span>
+                        <span>Scikit-Learn</span>
+                        <span>Flask</span>
+                        <span>HTML</span>
+                        <span>Streamlit</span>
+
+                    </div>
+
+                    <div class="project-buttons">
+
+                        <a
+                            href="https://github.com/KrishnaRajoo/Explainable-AI-Diabetes-Prediction-System"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            GitHub
+                        </a>
+
+                        <a
+                            href="https://aidiabetes-predictor.streamlit.app"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Live Demo
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Project 4 -->
+                <div class="project-card">
+
+                    <div class="project-status">
+
+                        <span class="status-dot"></span>
+
+                        Completed
+
+                    </div>
+
+                    <h3>
+                        Smart Student Data Management And Analytics System
+                    </h3>
+
+                    <p>
+                        A full-stack Student Analytics System developed using
+                        Flask, MySQL, and Chart.js to simplify student
+                        management, attendance tracking, teacher management,
+                        and academic analytics.
+                    </p>
+
+                    <div class="project-tech">
+
+                        <span>Python</span>
+                        <span>MySQL</span>
+                        <span>Render</span>
+                        <span>Flask</span>
+
+                    </div>
+
+                    <div class="project-buttons">
+
+                        <a
+                            href="https://github.com/KrishnaRajoo/Smart-Student-Data-Management-And-Analytics-System"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            GitHub
+                        </a>
+
+                        <a
+                            href="https://smart-student-data-management-and.onrender.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Live Demo
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             PROFESSIONAL EXPERIENCE
+        ================================================== -->
+
+        <section class="experience reveal" id="experience">
+
+            <div class="section-title">
+
+                <span class="section-tag">
+                    PROFESSIONAL EXPERIENCE
+                </span>
+
+                <h2>
+                    Industry Experience
+                </h2>
+
+                <p>
+                    Applying data analytics, business intelligence and
+                    visualization skills to solve real business challenges.
+                </p>
+
+            </div>
+
+
+            <!-- CodeVedX -->
+            <div class="experience-container">
+
+                <div class="experience-card">
+
+                    <div class="experience-header">
+
+                        <div>
+
+                            <span class="experience-badge">
+                                DATA SCIENCE INTERN
+                            </span>
+
+                            <h3>
+                                CodeVedX
+                            </h3>
+
+                            <h4>
+                                Remote Internship
+                            </h4>
+
+                        </div>
+
+                        <div class="experience-duration">
+
+                            <span>
+                                July 2026 – Present
+                            </span>
+
+                            <small>
+                                8 Weeks
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="experience-timeline">
+
+                        <div class="timeline-point">
+
+                            <span></span>
+
+                            <p>
+                                Developing 5 end-to-end Machine Learning
+                                projects using
+                                <strong>
+                                    Python, Scikit-learn, Pandas, and NumPy
+                                </strong>,
+                                covering classification, regression, and
+                                predictive analytics.
+                            </p>
+
+                        </div>
+
+
+                        <div class="timeline-point">
+
+                            <span></span>
+
+                            <p>
+                                Building interactive Flask/Streamlit web
+                                applications by implementing data
+                                preprocessing, model training, evaluation,
+                                and real-time prediction workflows.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="experience-skills">
+
+                        <span>Machine Learning</span>
+                        <span>Python</span>
+                        <span>Data Preprocessing</span>
+                        <span>EDA</span>
+                        <span>Flask</span>
+                        <span>Streamlit</span>
+                        <span>Random Forest</span>
+                        <span>Linear Regression</span>
+                        <span>Decision Tree</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Aneja Sons -->
+            <div class="experience-container">
+
+                <div class="experience-card">
+
+                    <div class="experience-header">
+
+                        <div>
+
+                            <span class="experience-badge">
+                                DATA ANALYST INTERN
+                            </span>
+
+                            <h3>
+                                Aneja Sons, Platinum Store
+                            </h3>
+
+                            <h4>
+                                Roorkee, Uttarakhand
+                            </h4>
+
+                        </div>
+
+                        <div class="experience-duration">
+
+                            <span>
+                                Jun 2025 – Jul 2025
+                            </span>
+
+                            <small>
+                                8 Weeks
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="experience-timeline">
+
+                        <div class="timeline-point">
+
+                            <span></span>
+
+                            <p>
+                                Collected and cleaned
+                                <strong>
+                                    50,000+ sales records
+                                </strong>
+                                to prepare reliable datasets for reporting.
+                            </p>
+
+                        </div>
+
+
+                        <div class="timeline-point">
+
+                            <span></span>
+
+                            <p>
+                                Designed
+                                <strong>
+                                    3+ interactive Power BI dashboards
+                                </strong>
+                                for customer insights and product
+                                performance.
+                            </p>
+
+                        </div>
+
+
+                        <div class="timeline-point">
+
+                            <span></span>
+
+                            <p>
+                                Conducted trend analysis to identify the
+                                <strong>
+                                    most profitable brands
+                                </strong>
+                                and support business strategy.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="experience-skills">
+
+                        <span>Power BI</span>
+                        <span>Python</span>
+                        <span>Data Cleaning</span>
+                        <span>Data Analysis</span>
+                        <span>Excel</span>
+                        <span>Business Intelligence</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             VOLUNTARY EXPERIENCE
+        ================================================== -->
+
+        <section class="experience reveal" id="voluntary">
+
+            <div class="section-title">
+
+                <span class="section-tag">
+                    PERSONAL EXPERIENCE
+                </span>
+
+                <h2>
+                    Voluntary Experience
+                </h2>
+
+                <p>
+                    Applying soft skills in my academic journey for engaging
+                    with the audience and enhancing confidence while
+                    communicating with them.
+                </p>
+
+            </div>
+
+
+            <div class="education-grid">
+
+                <!-- NSS Coordinator -->
+                <div class="education-card current">
+
+                    <div class="education-top">
+
+                        <span class="edu-year">
+                            May 2024 - October 2024
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        NSS Coordinator
+                    </h3>
+
+                    <p>
+                        Quantum University, Roorkee
+                    </p>
+
+                    <div>
+                        <span class="timeline-year">
+                            Organised multiple events and visits to villages
+                            for social welfare
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <!-- Sangam -->
+                <div class="education-card">
+
+                    <div class="education-top">
+
+                        <span class="edu-year">
+                            October 2024
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Event Coordinator - Sangam
+                    </h3>
+
+                    <p>
+                        Quantum University, Roorkee
+                    </p>
+
+                    <div>
+                        <span class="timeline-year">
+                            Coordinated this cultural event under NSS
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <!-- Open Mic -->
+                <div class="education-card">
+
+                    <div class="education-top">
+
+                        <span class="edu-year">
+                            March 2025
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Event Organiser - Open-mic Event
+                    </h3>
+
+                    <p>
+                        Dharohar - The Cultural Fest,
+                        Quantum University, Roorkee
+                    </p>
+
+                    <div>
+                        <span class="timeline-year">
+                            Organised an open-mic event including Rap,
+                            Mimicry and Stand-up Comedy
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             MISSION JOURNEY
+        ================================================== -->
+
+        <section class="journey reveal" id="journey">
+
+            <div class="section-title">
+
+                <span class="section-tag">
+                    MISSION JOURNEY
+                </span>
+
+                <h2>
+                    My Learning Timeline
+                </h2>
+
+                <p>
+                    A timeline highlighting my academic journey,
+                    certifications, internship experience and continuous
+                    growth in Data Science.
+                </p>
+
+            </div>
+
+
+            <div class="timeline">
+
+                <!-- 2023 -->
+                <div class="timeline-item">
+
+                    <div class="timeline-dot"></div>
+
+                    <div class="timeline-content">
+
+                        <span class="timeline-year">
+                            2023
+                        </span>
+
+                        <h3>
+                            Started B.Tech (CSE - Data Science)
+                        </h3>
+
+                        <p>
+                            Began my undergraduate journey at Quantum
+                            University, focusing on Data Science, Python
+                            and Artificial Intelligence.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- 2024 -->
+                <div class="timeline-item">
+
+                    <div class="timeline-dot"></div>
+
+                    <div class="timeline-content">
+
+                        <span class="timeline-year">
+                            2024
+                        </span>
+
+                        <h3>
+                            Data Analytics Certification
+                        </h3>
+
+                        <p>
+                            Completed Diploma in Data Analytics with Python
+                            and strengthened my knowledge of analytics
+                            and visualization.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- 2025 -->
+                <div class="timeline-item">
+
+                    <div class="timeline-dot"></div>
+
+                    <div class="timeline-content">
+
+                        <span class="timeline-year">
+                            2025
+                        </span>
+
+                        <h3>
+                            Data Analyst Internship
+                        </h3>
+
+                        <p>
+                            Worked on cleaning 50,000+ sales records and
+                            building interactive Power BI dashboards
+                            for business insights.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- 2026 -->
+                <div class="timeline-item">
+
+                    <div class="timeline-dot"></div>
+
+                    <div class="timeline-content">
+
+                        <span class="timeline-year">
+                            2026
+                        </span>
+
+                        <h3>
+                            Advanced Machine Learning Projects
+                        </h3>
+
+                        <p>
+                            Developed AI-powered applications including
+                            Explainable AI, Titanic Prediction and
+                            analytics projects.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             EDUCATION
+        ================================================== -->
+
+        <section class="education reveal" id="education">
+
+            <div class="section-title">
+
+                <span class="section-tag">
+                    EDUCATION
+                </span>
+
+                <h2>
+                    Academic Journey
+                </h2>
+
+                <p>
+                    Building a strong academic foundation while continuously
+                    expanding my knowledge in Data Science, Machine Learning,
+                    and Software Development.
+                </p>
+
+            </div>
+
+
+            <div class="education-grid">
+
+                <!-- B.Tech -->
+                <div class="education-card current">
+
+                    <div class="education-top">
+
+                        <span class="edu-status">
+                            CURRENT
+                        </span>
+
+                        <span class="edu-year">
+                            2023 - 2027
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Bachelor of Technology
                     </h3>
 
                     <h4>
+                        Computer Science & Engineering (Data Science)
+                    </h4>
+
+                    <p>
+                        Quantum University, Roorkee
+                    </p>
+
+                    <div class="edu-info">
+
+                        <span>
+                            CGPA : 8.38
+                        </span>
+
+                        <span>
+                            4th Year Student
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Class 12 -->
+                <div class="education-card">
+
+                    <div class="education-top">
+
+                        <span class="edu-status completed">
+                            COMPLETED
+                        </span>
+
+                        <span class="edu-year">
+                            2022
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Senior Secondary (CBSE)
+                    </h3>
+
+                    <h4>
+                        Science Stream
+                    </h4>
+
+                    <p>
                         Roorkee, Uttarakhand
+                    </p>
+
+                    <div class="edu-info">
+
+                        <span>
+                            73.67%
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Class 10 -->
+                <div class="education-card">
+
+                    <div class="education-top">
+
+                        <span class="edu-status completed">
+                            COMPLETED
+                        </span>
+
+                        <span class="edu-year">
+                            2020
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Secondary School (CBSE)
+                    </h3>
+
+                    <h4>
+                        General Education
                     </h4>
 
+                    <p>
+                        Roorkee, Uttarakhand
+                    </p>
+
+                    <div class="edu-info">
+
+                        <span>
+                            79.80%
+                        </span>
+
+                    </div>
+
                 </div>
 
-                <div class="experience-duration">
+            </div>
 
-                    <span>
-                        Jun 2025 – Jul 2025
+        </section>
+
+
+        <!-- =================================================
+             CERTIFICATIONS
+        ================================================== -->
+
+        <section class="certifications reveal" id="certifications">
+
+            <div class="section-title">
+
+                <span class="section-tag">
+                    ACHIEVEMENT VAULT
+                </span>
+
+                <h2>
+                    Certifications & Learning
+                </h2>
+
+                <p>
+                    Continuous learning is an important part of my journey.
+                    These certifications represent the knowledge and skills
+                    I've gained throughout my academic and professional growth.
+                </p>
+
+            </div>
+
+
+            <div class="certificate-grid">
+
+                <!-- Certificate 1 -->
+                <div class="certificate-card">
+
+                    <div class="certificate-icon">
+                        🎓
+                    </div>
+
+                    <h3>
+                        Advanced Diploma in Hardware & Software Application
+                    </h3>
+
+                    <p class="issuer">
+                        ACS Roorkee
+                    </p>
+
+                    <span class="certificate-year">
+                        2018 - 2019
                     </span>
 
-                    <small>
-                        8 Weeks
-                    </small>
-
                 </div>
 
-            </div>
 
-            <div class="experience-timeline">
+                <!-- Certificate 2 -->
+                <div class="certificate-card">
 
-                <div class="timeline-point">
-                    <span></span>
-                    <p>
-                        Collected and cleaned <strong>50,000+ sales records</strong>
-                        to prepare reliable datasets for reporting.
+                    <div class="certificate-icon">
+                        📊
+                    </div>
+
+                    <h3>
+                        Diploma in Data Analytics with Python
+                    </h3>
+
+                    <p class="issuer">
+                        Alison
                     </p>
+
+                    <span class="certificate-year">
+                        2024
+                    </span>
+
                 </div>
 
-                <div class="timeline-point">
-                    <span></span>
-                    <p>
-                        Designed <strong>3+ interactive Power BI dashboards</strong>
-                        for customer insights and product performance.
+
+                <!-- Certificate 3 -->
+                <div class="certificate-card">
+
+                    <div class="certificate-icon">
+                        ⚡
+                    </div>
+
+                    <h3>
+                        Project Manager - Electronics
+                    </h3>
+
+                    <p class="issuer">
+                        PMKVY
                     </p>
+
+                    <span class="certificate-year">
+                        2025
+                    </span>
+
                 </div>
 
-                <div class="timeline-point">
-                    <span></span>
-                    <p>
-                        Conducted trend analysis to identify the
-                        <strong>most profitable brands</strong>
-                        and support business strategy.
+
+                <!-- Certificate 4 -->
+                <div class="certificate-card">
+
+                    <div class="certificate-icon">
+                        🗄️
+                    </div>
+
+                    <h3>
+                        SQL Analytics & BI on Databricks
+                    </h3>
+
+                    <p class="issuer">
+                        Simplilearn
                     </p>
+
+                    <span class="certificate-year">
+                        2026
+                    </span>
+
                 </div>
 
             </div>
 
-            <div class="experience-skills">
+        </section>
 
-                <span>Power BI</span>
-                <span>Python</span>
-                <span>Data Cleaning</span>
-                <span>Data Analysis</span>
-                <span>Excel</span>
-                <span>Business Intelligence</span>
 
-            </div>
+        <!-- =================================================
+             CONTACT SECTION
+        ================================================== -->
 
-        </div>
+        <section class="contact reveal" id="contact">
 
-    </div>
+            <div class="section-title">
 
-</section>
-<section class="experience reveal" id="experience">
-    <div class="section-title">
-
-        <span class="section-tag">
-            PERSONAL EXPERIENCE
-        </span>
-
-        <h2>
-            Voluntary Experience
-        </h2>
-
-        <p>
-            Applying soft skills in my academic journey for engaging with the audience and enhance confidence
-            while communicating with them.
-        </p>
-    </div>
-
-    <div class="education-grid">
-
-        <!-- B.Tech -->
-
-        <div class="education-card current">
-
-            <div class="education-top">
-
-                <span class="edu-year">
-                    May 2024 - October 2024
+                <span class="section-tag">
+                    COMMUNICATION TERMINAL
                 </span>
 
-            </div>
-
-            <h3>
-                NSS Coordinator
-            </h3>
-
-            <p>
-
-                Quantum University, Roorkee
-
-            </p>
-
-            <div>
-
-                <span class="timeline-year">Organised multiple events and visits to villages for social welfare</span>
-
-            </div>
-
-        </div>
-
-        <!-- Class 12 -->
-
-        <div class="education-card">
-
-            <div class="education-top">
-
-                <span class="edu-year">
-                    October 2024
-                </span>
-
-            </div>
-
-            <h3>
-
-                Event Coordinator - Sangam
-
-            </h3>
-
-            <p>
-
-                Quantum University, Roorkee
-
-            </p>
-            <div>
-
-                <span class="timeline-year">Coordinated this cultural event under NSS</span>
-
-            </div>
-
-        </div>
-
-        <!-- Class 10 -->
-
-        <div class="education-card">
-
-            <div class="education-top">
-
-                <span class="edu-year">
-                    March 2025
-                </span>
-
-            </div>
-
-            <h3>
-
-                Event Organiser - Open-mic Event
-
-            </h3>
-
-            <p>
-
-                Dharohar- The Cultural Fest, Quantum University, Roorkee
-
-            </p>
-            <div>
-
-                <span class="timeline-year">Organised an open-mic event includes Rap, Mimicry and Stand-up Comedy</span>
-
-            </div>
-
-        </div>
-
-    </div>
-</section>
-<!--==========================
-MISSION JOURNEY
-===========================-->
-
-<section class="journey reveal" id="journey">
-
-    <div class="section-title">
-
-        <span class="section-tag">
-            MISSION JOURNEY
-        </span>
-
-        <h2>
-            My Learning Timeline
-        </h2>
-
-        <p>
-            A timeline highlighting my academic journey, certifications,
-            internship experience and continuous growth in Data Science.
-        </p>
-
-    </div>
-
-    <div class="timeline">
-
-        <!-- Item -->
-
-        <div class="timeline-item">
-
-            <div class="timeline-dot"></div>
-
-            <div class="timeline-content">
-
-                <span class="timeline-year">
-                    2023
-                </span>
-
-                <h3>
-                    Started B.Tech (CSE - Data Science)
-                </h3>
+                <h2>
+                    Let's Connect
+                </h2>
 
                 <p>
-                    Began my undergraduate journey at Quantum University,
-                    focusing on Data Science, Python and Artificial Intelligence.
+                    Whether you have an opportunity, collaboration idea,
+                    or simply want to discuss Data Science and AI,
+                    feel free to reach out.
                 </p>
 
             </div>
 
-        </div>
 
-        <!-- Item -->
+            <div class="contact-grid">
 
-        <div class="timeline-item">
+                <!-- Email -->
+                <a
+                    href="mailto:krishnarajoo6396@gmail.com"
+                    class="contact-card"
+                >
 
-            <div class="timeline-dot"></div>
+                    <div class="contact-icon">
+                        📧
+                    </div>
 
-            <div class="timeline-content">
+                    <h3>
+                        Email
+                    </h3>
 
-                <span class="timeline-year">
-                    2024
+                    <span>
+                        krishnarajoo6396@gmail.com
+                    </span>
+
+                </a>
+
+
+                <!-- Phone -->
+                <a
+                    href="tel:+916396900298"
+                    class="contact-card"
+                >
+
+                    <div class="contact-icon">
+                        ☎
+                    </div>
+
+                    <h3>
+                        Phone
+                    </h3>
+
+                    <span>
+                        +91 6396900298
+                    </span>
+
+                </a>
+
+
+                <!-- LinkedIn -->
+                <a
+                    href="https://linkedin.com/in/krishnarajoo"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="contact-card"
+                >
+
+                    <div class="contact-icon">
+                        💼
+                    </div>
+
+                    <h3>
+                        LinkedIn
+                    </h3>
+
+                    <span>
+                        linkedin.com/in/krishnarajoo
+                    </span>
+
+                </a>
+
+
+                <!-- GitHub -->
+                <a
+                    href="https://github.com/krishnarajoo"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="contact-card"
+                >
+
+                    <div class="contact-icon">
+                        💻
+                    </div>
+
+                    <h3>
+                        GitHub
+                    </h3>
+
+                    <span>
+                        github.com/krishnarajoo
+                    </span>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             MESSAGE / CONTACT FORM
+        ================================================== -->
+
+        <section class="contact-form-section reveal" id="message">
+
+            <div class="section-title">
+
+                <span class="section-tag">
+                    SEND MESSAGE
                 </span>
 
-                <h3>
-                    Data Analytics Certification
-                </h3>
+                <h2>
+                    Let's Chat
+                </h2>
 
                 <p>
-                    Completed Diploma in Data Analytics with Python and strengthened
-                    my knowledge of analytics and visualization.
+                    Have a project, opportunity, or just want to say hello?
+                    Send me a message.
                 </p>
 
             </div>
 
-        </div>
 
-        <!-- Item -->
+            <form
+                id="contact-form"
+                class="contact-form education-card"
+            >
 
-        <div class="timeline-item">
+                <input
+                    type="hidden"
+                    name="_captcha"
+                    value="false"
+                >
 
-            <div class="timeline-dot"></div>
+                <input
+                    type="hidden"
+                    name="_subject"
+                    value="New Portfolio Message"
+                >
 
-            <div class="timeline-content">
 
-                <span class="timeline-year">
-                    2025
+                <div class="input-row">
+
+                    <input
+                        type="text"
+                        name="from_name"
+                        placeholder="Your Name"
+                        required
+                    >
+
+                    <input
+                        type="email"
+                        name="from_email"
+                        placeholder="Your Email"
+                        required
+                    >
+
+                </div>
+
+
+                <input
+                    type="text"
+                    name="subject"
+                    placeholder="Subject"
+                    required
+                >
+
+
+                <textarea
+                    name="message"
+                    rows="7"
+                    placeholder="Write your message..."
+                    required
+                ></textarea>
+
+
+                <button
+                    type="submit"
+                    class="btn"
+                >
+                    Send Message
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- =================================================
+             AI TRANSMISSION POPUP
+        ================================================== -->
+
+        <div id="transmission-popup">
+
+            <div class="transmission-header">
+
+                <span class="system-dot"></span>
+
+                <span>
+                    AI COMMUNICATION SYSTEM
                 </span>
 
-                <h3>
-                    Data Analyst Internship
-                </h3>
-
-                <p>
-                    Worked on cleaning 50,000+ sales records and building interactive
-                    Power BI dashboards for business insights.
-                </p>
-
-            </div>
-
-        </div>
-
-        <!-- Item -->
-
-        <div class="timeline-item">
-
-            <div class="timeline-dot"></div>
-
-            <div class="timeline-content">
-
-                <span class="timeline-year">
-                    2026
-                </span>
-
-                <h3>
-                    Advanced Machine Learning Projects
-                </h3>
-
-                <p>
-                    Developed AI-powered applications including Explainable AI,
-                    Titanic Prediction and analytics projects.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!--==========================
-EDUCATION
-===========================-->
-
-<section class="education reveal" id="education">
-
-    <div class="section-title">
-
-        <span class="section-tag">
-            EDUCATION
-        </span>
-
-        <h2>
-            Academic Journey
-        </h2>
-
-        <p>
-            Building a strong academic foundation while continuously
-            expanding my knowledge in Data Science, Machine Learning,
-            and Software Development.
-        </p>
-
-    </div>
-
-    <div class="education-grid">
-
-        <!-- B.Tech -->
-
-        <div class="education-card current">
-
-            <div class="education-top">
-
-                <span class="edu-status">
-                    CURRENT
-                </span>
-
-                <span class="edu-year">
-                    2023 - 2027
+                <span class="system-status">
+                    ONLINE
                 </span>
 
             </div>
 
-            <h3>
-                Bachelor of Technology
-            </h3>
 
-            <h4>
-                Computer Science & Engineering (Data Science)
-            </h4>
+            <div class="transmission-body">
 
-            <p>
+                <div class="transmission-icon">
+                    ✓
+                </div>
 
-                Quantum University, Roorkee
+                <div class="transmission-text">
 
+                    <h3>
+                        Transmission Successful
+                    </h3>
+
+                    <p>
+                        Your message has reached
+                    </p>
+
+                    <strong>
+                        Krishna Rajoo
+                    </strong>
+
+
+                    <div class="transmission-status">
+
+                        <span>
+                            STATUS:
+                        </span>
+
+                        <span class="delivered">
+                            DELIVERED ✓
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="scan-line"></div>
+
+        </div>
+
+
+        <!-- =================================================
+             FOOTER
+        ================================================== -->
+
+        <footer>
+
+            <p style="text-align: center; font-family: 'Inter', sans-serif;">
+                © Krishna Rajoo | Designed with 🤍
             </p>
 
-            <div class="edu-info">
+        </footer>
 
-                <span>CGPA : 8.38</span>
 
-                <span>4th Year Student</span>
+        <!-- =================================================
+             JAVASCRIPT
+        ================================================== -->
 
-            </div>
+        <!-- EmailJS -->
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-        </div>
-
-        <!-- Class 12 -->
-
-        <div class="education-card">
-
-            <div class="education-top">
-
-                <span class="edu-status completed">
-                    COMPLETED
-                </span>
-
-                <span class="edu-year">
-                    2022
-                </span>
-
-            </div>
-
-            <h3>
-
-                Senior Secondary (CBSE)
-
-            </h3>
-
-            <h4>
-
-                Science Stream
-
-            </h4>
-
-            <p>
-
-                Roorkee, Uttarakhand
-
-            </p>
-
-            <div class="edu-info">
-
-                <span>73.67%</span>
-
-            </div>
-
-        </div>
-
-        <!-- Class 10 -->
-
-        <div class="education-card">
-
-            <div class="education-top">
-
-                <span class="edu-status completed">
-                    COMPLETED
-                </span>
-
-                <span class="edu-year">
-                    2020
-                </span>
-
-            </div>
-
-            <h3>
-
-                Secondary School (CBSE)
-
-            </h3>
-
-            <h4>
-
-                General Education
-
-            </h4>
-
-            <p>
-
-                Roorkee, Uttarakhand
-
-            </p>
-
-            <div class="edu-info">
-
-                <span>79.80%</span>
-
-            </div>
-
-        </div>
+        <!-- Portfolio Scripts -->
+        <script src="js/background.js"></script>
+        <script src="js/main.js"></script>
 
     </div>
 
-</section>
-<!--==========================
-ACHIEVEMENTS
-===========================-->
-
-<section class="certifications reveal" id="certifications">
-
-    <div class="section-title">
-
-        <span class="section-tag">
-            ACHIEVEMENT VAULT
-        </span>
-
-        <h2>
-            Certifications & Learning
-        </h2>
-
-        <p>
-            Continuous learning is an important part of my journey.
-            These certifications represent the knowledge and skills I've
-            gained throughout my academic and professional growth.
-        </p>
-
-    </div>
-
-    <div class="certificate-grid">
-
-        <!-- Certificate -->
-
-        <div class="certificate-card">
-
-            <div class="certificate-icon">
-                🎓
-            </div>
-
-            <h3>
-                Advanced Diploma in Hardware & Software Application
-            </h3>
-
-            <p class="issuer">
-                ACS Roorkee
-            </p>
-
-            <span class="certificate-year">
-                2018 - 2019
-            </span>
-
-        </div>
-
-        <!-- Certificate -->
-
-        <div class="certificate-card">
-
-            <div class="certificate-icon">
-                📊
-            </div>
-
-            <h3>
-                Diploma in Data Analytics with Python
-            </h3>
-
-            <p class="issuer">
-                Alison
-            </p>
-
-            <span class="certificate-year">
-                2024
-            </span>
-
-        </div>
-
-        <!-- Certificate -->
-
-        <div class="certificate-card">
-
-            <div class="certificate-icon">
-                ⚡
-            </div>
-
-            <h3>
-                Project Manager - Electronics
-            </h3>
-
-            <p class="issuer">
-                PMKVY
-            </p>
-
-            <span class="certificate-year">
-                2025
-            </span>
-
-        </div>
-
-        <!-- Certificate -->
-
-        <div class="certificate-card">
-
-            <div class="certificate-icon">
-                🗄️
-            </div>
-
-            <h3>
-                SQL Analytics & BI on Databricks
-            </h3>
-
-            <p class="issuer">
-                Simplilearn
-            </p>
-
-            <span class="certificate-year">
-                2026
-            </span>
-
-        </div>
-
-    </div>
-
-</section>
-<!--==========================
-CONTACT
-===========================-->
-
-<section class="contact reveal" id="contact">
-
-    <div class="section-title">
-
-        <span class="section-tag">
-            COMMUNICATION TERMINAL
-        </span>
-
-        <h2>
-            Let's Connect
-        </h2>
-
-        <p>
-
-            Whether you have an opportunity, collaboration idea, or simply want to
-            discuss Data Science and AI, feel free to reach out.
-
-        </p>
-
-    </div>
-
-    <div class="contact-grid">
-
-        <!-- Email -->
-
-        <a href="mailto:krishnarajoo6396@gmail.com" class="contact-card">
-
-            <div class="contact-icon">📧</div>
-
-            <h3>Email</h3>
-
-            <span>krishnarajoo6396@gmail.com</span>
-
-        </a>
-
-        <!-- Phone -->
-
-        <a href="tel:+916396900298" class="contact-card">
-
-            <div class="contact-icon">☎</div>
-
-            <h3>Phone</h3>
-
-            <span>+91 6396900298</span>
-
-        </a>
-
-        <!-- LinkedIn -->
-
-        <a href="https://linkedin.com/in/krishnarajoo"
-           target="_blank"
-           class="contact-card">
-
-            <div class="contact-icon">💼</div>
-
-            <h3>LinkedIn</h3>
-
-            <span>linkedin.com/in/krishnarajoo</span>
-
-        </a>
-
-        <!-- GitHub -->
-
-        <a href="https://github.com/krishnarajoo"
-           target="_blank"
-           class="contact-card">
-
-            <div class="contact-icon">💻</div>
-
-            <h3>GitHub</h3>
-
-            <span>github.com/krishnarajoo</span>
-
-        </a>
-
-    </div>
-
-</section>
-<section class="contact-form-section reveal" id="message">
-
-    <div class="section-title">
-        <span class="section-tag">
-            Send Message
-        </span>
-
-        <h2>Let's Chat</h2>
-        <p>Have a project, opportunity, or just want to say hello? Send me a message.</p>
-    </div>
-
-    <form id="contact-form" class="contact-form education-card">
-
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_subject" value="New Portfolio Message">
-
-        <div class="input-row">
-
-            <input
-                type="text"
-                name="from_name"
-                placeholder="Your Name"
-                required>
-
-            <input
-                type="email"
-                name="from_email"
-                placeholder="Your Email"
-                required>
-
-        </div>
-
-        <input
-            type="text"
-            name="subject"
-            placeholder="Subject"
-            required>
-
-        <textarea
-            name="message"
-            rows="7"
-            placeholder="Write your message..."
-            required></textarea>
-
-        <button type="submit" class="btn">
-            Send Message
-        </button>
-
-    </form>
-</section>
-<!-- AI TRANSMISSION POPUP -->
-
-<div id="transmission-popup">
-
-    <div class="transmission-header">
-
-        <span class="system-dot"></span>
-
-        <span>AI COMMUNICATION SYSTEM</span>
-
-        <span class="system-status">ONLINE</span>
-
-    </div>
-
-    <div class="transmission-body">
-
-        <div class="transmission-icon">
-            ✓
-        </div>
-
-        <div class="transmission-text">
-
-            <h3>Transmission Successful</h3>
-
-            <p>Your message has reached</p>
-
-            <strong>Krishna Rajoo</strong>
-
-            <div class="transmission-status">
-
-                <span>STATUS:</span>
-
-                <span class="delivered">
-                    DELIVERED ✓
-                </span>
-
-            </div>
-
-        </div>
-
-    </div>
-
-    <div class="scan-line"></div>
-
-</div>
-<footer>
-    <p style="text-align: center;font-family:'Inter',sans-serif;"> © Krishna Rajoo | Designed with🤍</p>
-</footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script src="js/background.js"></script>
-    <script src="js/main.js"></script>
-</div>
 </body>
 
 </html>
