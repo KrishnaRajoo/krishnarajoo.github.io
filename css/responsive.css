@@ -1,851 +1,2638 @@
 /* =========================================================
-   RESPONSIVE DESIGN
-   Krishna Rajoo Portfolio
-   Galaxy / Black Glass / Cyan Theme
+   KRISHNA RAJOO — PROFESSIONAL DATA SCIENCE PORTFOLIO
+   RESPONSIVE.CSS
+   PREMIUM LIGHT / AI / DATA SCIENCE DESIGN
+
+   Desktop • Laptop • Tablet • Mobile • Small Phones
 ========================================================= */
 
 
 /* =========================================================
-   MOBILE NAVIGATION
+   GLOBAL RESPONSIVE FOUNDATION
 ========================================================= */
 
-@media (max-width: 900px) {
+@media (max-width: 1280px) {
 
-    /* =====================================================
-       HAMBURGER BUTTON
-    ===================================================== */
+    :root {
+        --container: 1120px;
+    }
+
+    .navbar,
+    .section-container,
+    .hero-container,
+    .footer-container,
+    .footer-bottom {
+        width: min(92%, var(--container));
+    }
+
+    .hero-container {
+        gap: 55px;
+    }
+
+    .about-grid {
+        grid-template-columns: 290px minmax(0, 1fr);
+        gap: 55px;
+    }
+
+    .contact-wrapper {
+        gap: 55px;
+    }
+
+    .section::before {
+        max-width: 100%;
+    }
+}
+
+
+/* =========================================================
+   COMPACT DESKTOP — 1100px
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .navbar {
+        gap: 20px;
+    }
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .nav-resume {
+        padding: 9px 15px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        padding-top: 125px;
+    }
+
+    .hero-container {
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(350px, 0.85fr);
+
+        gap: 45px;
+    }
+
+    .hero h1 {
+        font-size:
+            clamp(
+                48px,
+                6vw,
+                68px
+            );
+    }
+
+    .hero-description {
+        max-width: 570px;
+    }
+
+    .hero-visual {
+        min-height: 450px;
+    }
+
+    .data-card {
+        max-width: 460px;
+    }
+
+    .floating-card-one {
+        left: -12px;
+    }
+
+    .floating-card-two {
+        right: -12px;
+    }
+
+
+    /* ABOUT */
+
+    .about-grid {
+        grid-template-columns:
+            270px
+            minmax(0, 1fr);
+
+        gap: 45px;
+    }
+
+
+    /* CONTACT */
+
+    .contact-wrapper {
+        grid-template-columns:
+            minmax(0, 0.8fr)
+            minmax(430px, 1.2fr);
+    }
+}
+
+
+/* =========================================================
+   TABLET TRANSITION — 950px
+========================================================= */
+
+@media (max-width: 950px) {
+
+    header {
+        height: 70px;
+    }
+
+    .navbar {
+        height: 70px;
+    }
+
+    .nav-links {
+        gap: 13px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .brand-name {
+        font-size: 13px;
+    }
+
+    .nav-resume {
+        font-size: 11px;
+        padding: 9px 13px;
+    }
+
+
+    /* SECTIONS */
+
+    .section {
+        padding: 90px 0;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: auto;
+        padding: 125px 0 90px;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 70px;
+    }
+
+    .hero-content {
+        max-width: 760px;
+    }
+
+    .hero h1 {
+        max-width: 800px;
+
+        font-size:
+            clamp(
+                50px,
+                8vw,
+                72px
+            );
+    }
+
+    .hero-description {
+        max-width: 700px;
+    }
+
+    .hero-visual {
+        width: 100%;
+        max-width: 650px;
+        min-height: 470px;
+        margin: 0 auto;
+    }
+
+    .data-card {
+        max-width: 520px;
+    }
+
+
+    /* ABOUT */
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .profile-panel {
+        width: 100%;
+        max-width: 430px;
+        margin: 0 auto;
+    }
+
+
+    /* STATS */
+
+    .stats-grid {
+        grid-template-columns:
+            repeat(
+                4,
+                minmax(0, 1fr)
+            );
+    }
+
+
+    /* EXPERTISE */
+
+    .expertise-grid {
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+    }
+
+
+    /* PROJECTS */
+
+    .projects-grid {
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+    }
+
+    .project-card.featured {
+        grid-column: span 2;
+    }
+
+
+    /* EDUCATION */
+
+    .education-grid {
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+    }
+
+    .education-card:last-child {
+        grid-column: span 2;
+    }
+
+
+    /* VOLUNTARY */
+
+    .voluntary-grid {
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+    }
+
+
+    /* CONTACT */
+
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .contact-content {
+        max-width: 720px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE NAVIGATION — 850px
+========================================================= */
+
+@media (max-width: 850px) {
+
+    header {
+        height: 68px;
+    }
+
+    .navbar {
+        width: 90%;
+        height: 68px;
+    }
+
+
+    /* MOBILE MENU */
+
+    .nav-links {
+
+        position: fixed;
+
+        top: 68px;
+        left: 0;
+
+        width: 100%;
+        height: calc(100vh - 68px);
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        justify-content: flex-start;
+
+        gap: 8px;
+
+        padding:
+            20px
+            5%
+            35px;
+
+        overflow-y: auto;
+
+        background:
+            radial-gradient(
+                circle at 10% 10%,
+                rgba(37, 99, 235, 0.12),
+                transparent 28%
+            ),
+
+            radial-gradient(
+                circle at 90% 20%,
+                rgba(124, 58, 237, 0.10),
+                transparent 30%
+            ),
+
+            linear-gradient(
+                180deg,
+                rgba(255,255,255,0.98),
+                rgba(248,250,252,0.98)
+            );
+
+        border-top:
+            1px solid
+            rgba(15,23,42,0.08);
+
+        box-shadow:
+            0 25px 70px
+            rgba(15,23,42,0.14);
+
+        backdrop-filter:
+            blur(24px);
+
+        -webkit-backdrop-filter:
+            blur(24px);
+
+        transform: translateX(100%);
+
+        opacity: 0;
+
+        visibility: hidden;
+
+        pointer-events: none;
+
+        transition:
+            transform 0.45s
+            cubic-bezier(
+                0.22,
+                1,
+                0.36,
+                1
+            ),
+            opacity 0.3s ease,
+            visibility 0.3s ease;
+
+        z-index: 999;
+    }
+
+
+    .nav-links.active {
+
+        transform: translateX(0);
+
+        opacity: 1;
+
+        visibility: visible;
+
+        pointer-events: auto;
+    }
+
+
+    .nav-links li {
+        width: 100%;
+    }
+
+
+    .nav-links a {
+
+        width: 100%;
+
+        display: flex;
+
+        align-items: center;
+
+        min-height: 54px;
+
+        padding: 0 17px;
+
+        border-radius: 14px;
+
+        color: var(--text-secondary);
+
+        background:
+            rgba(255,255,255,0.55);
+
+        font-size: 14px;
+
+        font-weight: 650;
+
+        border:
+            1px solid
+            rgba(15,23,42,0.06);
+
+        box-shadow:
+            0 5px 18px
+            rgba(15,23,42,0.03);
+
+        transition:
+            color 0.25s ease,
+            background 0.25s ease,
+            border-color 0.25s ease,
+            transform 0.25s ease,
+            box-shadow 0.25s ease;
+    }
+
+
+    .nav-links a::after {
+        display: none;
+    }
+
+
+    .nav-links a:hover {
+
+        color: var(--primary);
+
+        background:
+            linear-gradient(
+                135deg,
+                rgba(37,99,235,0.08),
+                rgba(124,58,237,0.06)
+            );
+
+        border-color:
+            rgba(37,99,235,0.18);
+
+        box-shadow:
+            0 10px 28px
+            rgba(37,99,235,0.08);
+
+        transform: translateX(5px);
+    }
+
+
+    .nav-links a.active {
+
+        color: var(--primary);
+
+        background:
+            linear-gradient(
+                135deg,
+                rgba(37,99,235,0.11),
+                rgba(124,58,237,0.07)
+            );
+
+        border-color:
+            rgba(37,99,235,0.22);
+
+        box-shadow:
+            inset 3px 0 0 var(--primary),
+            0 8px 24px
+            rgba(37,99,235,0.07);
+    }
+
+
+    .nav-resume {
+        display: none;
+    }
+
+
+    /* HAMBURGER */
 
     .hamburger {
 
         display: flex;
 
-        flex-direction: column;
-        justify-content: center;
+        width: 42px;
+        height: 42px;
+
+        flex-shrink: 0;
+
+        margin-left: auto;
+
         align-items: center;
+        justify-content: center;
+
+        flex-direction: column;
 
         gap: 5px;
 
-        width: 46px;
-        height: 46px;
-
-        padding: 0;
-
-        cursor: pointer;
-
-        border-radius: 50%;
+        border-radius: 12px;
 
         background:
-            rgba(0, 0, 0, .35);
+            rgba(255,255,255,0.82);
 
         border:
-            1px solid rgba(0, 245, 255, .35);
-
-        backdrop-filter: blur(18px);
-        -webkit-backdrop-filter: blur(18px);
+            1px solid
+            rgba(15,23,42,0.10);
 
         box-shadow:
-            0 0 12px rgba(0, 245, 255, .10),
-            inset 0 0 15px rgba(0, 245, 255, .035);
+            0 7px 22px
+            rgba(15,23,42,0.08);
 
-        position: relative;
+        cursor: pointer;
 
         z-index: 1001;
 
         transition:
-            .35s ease;
+            transform 0.25s ease,
+            border-color 0.25s ease,
+            box-shadow 0.25s ease,
+            background 0.25s ease;
+    }
+
+
+    .hamburger span {
+
+        display: block;
+
+        width: 18px;
+        height: 2px;
+
+        border-radius: 10px;
+
+        background: var(--text);
+
+        transition:
+            transform 0.3s ease,
+            opacity 0.25s ease,
+            background 0.25s ease;
     }
 
 
     .hamburger:hover {
 
         border-color:
-            rgba(0, 245, 255, .75);
+            rgba(37,99,235,0.30);
 
         background:
-            rgba(0, 245, 255, .05);
+            rgba(37,99,235,0.06);
 
         box-shadow:
-            0 0 18px rgba(0, 245, 255, .22),
-            inset 0 0 15px rgba(0, 245, 255, .06);
-
-        transform:
-            scale(1.05);
+            0 10px 25px
+            rgba(37,99,235,0.10);
     }
 
 
-    /* Hamburger lines */
+    .hamburger.active {
 
-    .hamburger span {
-
-        display: block;
-
-        width: 22px;
-        height: 2px;
-
-        border-radius: 10px;
+        border-color:
+            rgba(37,99,235,0.30);
 
         background:
-            #00f5ff;
-
-        box-shadow:
-            0 0 7px rgba(0, 245, 255, .55);
-
-        transition:
-            .35s ease;
+            linear-gradient(
+                135deg,
+                rgba(37,99,235,0.08),
+                rgba(124,58,237,0.07)
+            );
     }
 
 
-    /* =====================================================
-       HAMBURGER ACTIVE
-    ===================================================== */
+    .hamburger.active span {
+        background: var(--primary);
+    }
+
 
     .hamburger.active span:nth-child(1) {
-
         transform:
             translateY(7px)
             rotate(45deg);
     }
 
-
     .hamburger.active span:nth-child(2) {
-
         opacity: 0;
-
-        transform:
-            scaleX(0);
     }
 
-
     .hamburger.active span:nth-child(3) {
-
         transform:
             translateY(-7px)
             rotate(-45deg);
     }
 
 
-    /* =====================================================
-       MOBILE NAVIGATION CONTAINER
-    ===================================================== */
+    body.menu-open {
+        overflow: hidden;
+    }
 
-    .nav-links {
 
-        position: absolute;
+    /* HERO */
 
-        top: 82px;
+    .hero {
+        padding-top: 115px;
+    }
 
-        left: 5%;
 
+    /* EXPERIENCE */
+
+    .experience-item {
+
+        grid-template-columns:
+            90px
+            28px
+            minmax(0, 1fr);
+
+        gap: 16px;
+
+        min-width: 0;
+    }
+
+    .experience-content {
+        min-width: 0;
+    }
+}
+
+
+/* =========================================================
+   LARGE MOBILE / TABLET — 768px
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .navbar,
+    .section-container,
+    .hero-container,
+    .footer-container,
+    .footer-bottom {
         width: 90%;
+    }
 
-        display: flex;
+    body {
+        overflow-x: hidden;
+    }
 
-        flex-direction: column;
+
+    .hero,
+    .section,
+    footer {
+        overflow: hidden;
+    }
+
+
+    .section {
+        padding: 75px 0;
+    }
+
+
+    /* SECTION HEADINGS */
+
+    .section-heading {
+        margin-bottom: 42px;
+    }
+
+    .section-heading h2 {
+
+        font-size:
+            clamp(
+                34px,
+                8vw,
+                46px
+            );
+
+        line-height: 1.08;
+    }
+
+    .section-heading p {
+
+        font-size: 14px;
+
+        line-height: 1.75;
+
+        /* IMPORTANT */
+        white-space: normal;
+        word-break: normal;
+        overflow-wrap: normal;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        padding: 105px 0 70px;
+    }
+
+    .hero-container {
+        gap: 55px;
+    }
+
+    .hero-eyebrow {
+
+        font-size: 10px;
+
+        letter-spacing: 0.13em;
+    }
+
+    .hero h1 {
+
+        margin-bottom: 20px;
+
+        font-size:
+            clamp(
+                42px,
+                11vw,
+                62px
+            );
+
+        line-height: 1.03;
+
+        letter-spacing: -0.05em;
+    }
+
+    .hero-description {
+
+        margin-bottom: 27px;
+
+        font-size: 15px;
+
+        line-height: 1.75;
+
+        white-space: normal;
+        word-break: normal;
+        overflow-wrap: normal;
+    }
+
+
+    /* HERO BUTTONS */
+
+    .hero-actions {
+
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0,1fr)
+            );
 
         gap: 10px;
 
-        padding: 20px;
+        margin-bottom: 25px;
+    }
 
-        list-style: none;
+    .hero-actions .btn {
+        width: 100%;
+    }
+
+
+    /* AVAILABILITY */
+
+    .availability {
+        font-size: 11px;
+    }
+
+
+    /* HERO VISUAL */
+
+    .hero-visual {
+
+        min-height: 410px;
+
+        max-width: 600px;
+
+        width: 100%;
+    }
+
+
+    .data-card {
+
+        width: 100%;
+
+        padding: 22px;
 
         border-radius: 22px;
 
-
-        /* -------------------------------------------------
-           MAIN PORTFOLIO BACKGROUND
-
-           Almost completely black.
-           Cyan is only used as a subtle glow.
-        ------------------------------------------------- */
-
-        background:
-            rgba(0, 0, 0, .72);
-
-        backdrop-filter:
-            blur(22px);
-
-        -webkit-backdrop-filter:
-            blur(22px);
+        min-width: 0;
+    }
 
 
-        /* Cyan glass border */
+    .data-card-header {
+        margin-bottom: 22px;
+    }
 
-        border:
-            1px solid rgba(0, 245, 255, .20);
+
+    .data-card h3 {
+        font-size: 20px;
+    }
 
 
-        /* Soft glass shadow */
+    .analytics-visual {
+        height: 205px;
+    }
+
+
+    /* FLOATING CARDS */
+
+    .floating-card {
+
+        padding: 10px 12px;
+
+        border-radius: 11px;
 
         box-shadow:
-            0 20px 50px rgba(0, 0, 0, .70),
-            0 0 25px rgba(0, 245, 255, .07),
-            inset 0 0 25px rgba(0, 245, 255, .025);
+            0 15px 35px
+            rgba(15,23,42,0.12);
 
+        animation-duration: 5s;
+    }
 
-        overflow: hidden;
+    .floating-card-one {
+        top: 35px;
+        left: -7px;
+    }
 
+    .floating-card-two {
+        right: -7px;
+        bottom: 38px;
+    }
 
-        /* Closed state */
+    .floating-icon {
 
-        opacity: 0;
-
-        visibility: hidden;
-
-        transform:
-            translateY(-12px)
-            scale(.97);
-
-        transform-origin:
-            top center;
-
-
-        transition:
-            opacity .30s ease,
-            transform .35s ease,
-            visibility .30s ease;
-
-
-        z-index: 1000;
+        width: 31px;
+        height: 31px;
     }
 
 
-    /* =====================================================
-       SUBTLE CYAN GLASS GLOW
-    ===================================================== */
+    /* ABOUT */
 
-    .nav-links::before {
+    .about-grid {
+        gap: 35px;
+    }
 
-        content: "";
+    .profile-panel {
 
-        position: absolute;
+        max-width: 430px;
 
-        width: 260px;
-        height: 260px;
+        padding: 20px;
 
-        top: -190px;
-        right: -120px;
+        margin: 0 auto;
+    }
 
-        border-radius: 50%;
+    .about-content p {
 
-        background:
-            radial-gradient(
-                circle,
-                rgba(0, 245, 255, .12),
-                rgba(0, 245, 255, .04) 35%,
-                transparent 70%
+        font-size: 14px;
+
+        white-space: normal;
+        word-break: normal;
+        overflow-wrap: normal;
+    }
+
+    .about-content .about-lead {
+
+        font-size: 18px;
+
+        line-height: 1.65;
+    }
+
+
+    /* STATS */
+
+    .stats-grid {
+
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0,1fr)
             );
 
-        filter:
-            blur(30px);
+        gap: 12px;
+    }
 
-        pointer-events: none;
+    .stat-item {
+        padding: 18px;
+    }
+
+    .stat-item strong {
+        font-size: 25px;
     }
 
 
-    /* Very subtle lower glow */
+    /* EXPERTISE */
 
-    .nav-links::after {
+    .expertise-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
 
-        content: "";
+    .expertise-card {
+        padding: 24px;
+    }
 
-        position: absolute;
+    .expertise-card h3 {
+        font-size: 19px;
+    }
 
-        width: 220px;
-        height: 220px;
+    .expertise-card p {
 
-        bottom: -180px;
-        left: -120px;
+        line-height: 1.75;
 
-        border-radius: 50%;
-
-        background:
-            radial-gradient(
-                circle,
-                rgba(0, 245, 255, .06),
-                transparent 70%
-            );
-
-        filter:
-            blur(35px);
-
-        pointer-events: none;
+        white-space: normal;
+        word-break: normal;
+        overflow-wrap: normal;
     }
 
 
-    /* =====================================================
-       OPEN MENU
-    ===================================================== */
+    /* TECHNOLOGY */
 
-    .nav-links.active {
+    .technology-stack {
 
-        opacity: 1;
+        margin-top: 28px;
 
-        visibility: visible;
+        padding: 22px;
 
-        transform:
-            translateY(0)
-            scale(1);
+        min-width: 0;
+    }
+
+    .technology-list {
+        gap: 7px;
+    }
+
+    .technology-list span {
+
+        padding: 7px 10px;
+
+        font-size: 10px;
+
+        white-space: nowrap;
     }
 
 
-    /* =====================================================
-       NAVIGATION LINKS
-    ===================================================== */
+    /* PROJECTS */
 
-    .nav-links a {
+    .projects-grid {
 
-        position: relative;
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+
+        min-width: 0;
+    }
+
+    .project-card,
+    .project-card.featured {
+
+        grid-column: auto;
+
+        padding: 24px;
+
+        min-width: 0;
+    }
+
+    .project-content h3 {
+        font-size: 20px;
+    }
+
+    .project-content p {
+
+        font-size: 13px;
+
+        line-height: 1.75;
+
+        white-space: normal;
+        word-break: normal;
+        overflow-wrap: normal;
+    }
+
+
+    /* EXPERIENCE */
+
+    .experience-item {
+
+        display: grid;
+
+        grid-template-columns:
+            1fr;
+
+        gap: 12px;
+
+        padding-bottom: 35px;
+
+        min-width: 0;
 
         width: 100%;
+    }
+
+    .experience-date {
 
         display: flex;
 
         align-items: center;
-        justify-content: center;
 
-        padding: 15px 18px;
+        gap: 8px;
 
-        border-radius: 14px;
+        text-align: left;
 
-        text-decoration: none;
-
-        color:
-            #00f5ff;
-
-        font-family:
-            'Inter',
-            sans-serif;
-
-        font-size: 15px;
-
-        font-weight: 500;
-
-        letter-spacing:
-            .4px;
-
-
-        /* -------------------------------------------------
-           BLACK GLASS LINK
-        ------------------------------------------------- */
-
-        background:
-            rgba(0, 0, 0, .30);
-
-        border:
-            1px solid rgba(0, 245, 255, .10);
-
-
-        backdrop-filter:
-            blur(12px);
-
-        -webkit-backdrop-filter:
-            blur(12px);
-
-
-        box-shadow:
-            inset 0 0 15px rgba(0, 245, 255, .015);
-
-
-        overflow: hidden;
-
-
-        transition:
-            color .3s ease,
-            background .3s ease,
-            border-color .3s ease,
-            box-shadow .3s ease,
-            transform .3s ease;
+        min-width: 0;
     }
 
+    .experience-date small {
+        font-size: 9px;
+    }
 
-    /* =====================================================
-       CYAN SHIMMER
-    ===================================================== */
+    .experience-marker {
+        display: none;
+    }
 
-    .nav-links a::before {
+    .experience-content {
 
-        content: "";
+        padding: 23px;
 
-        position: absolute;
-
-        top: 0;
-
-        left: -120%;
+        min-width: 0;
 
         width: 100%;
-
-        height: 100%;
-
-        background:
-            linear-gradient(
-                100deg,
-                transparent,
-                rgba(0, 245, 255, .10),
-                transparent
-            );
-
-        transform:
-            skewX(-20deg);
-
-        transition:
-            left .55s ease;
-
-        pointer-events: none;
     }
-
-
-    /* =====================================================
-       LEFT CYAN GLOW EDGE
-    ===================================================== */
-
-    .nav-links a::after {
-
-        content: "";
-
-        position: absolute;
-
-        left: 0;
-
-        top: 50%;
-
-        width: 2px;
-
-        height: 0;
-
-        border-radius: 10px;
-
-        background:
-            #00f5ff;
-
-        box-shadow:
-            0 0 8px #00f5ff;
-
-        transform:
-            translateY(-50%);
-
-        transition:
-            height .3s ease;
-
-        pointer-events: none;
-    }
-
-
-    /* =====================================================
-       HOVER SHIMMER
-    ===================================================== */
-
-    .nav-links a:hover::before {
-
-        left: 120%;
-    }
-
-
-    /* =====================================================
-       HOVER LEFT EDGE
-    ===================================================== */
-
-    .nav-links a:hover::after {
-
-        height: 60%;
-    }
-
-
-    /* =====================================================
-       HOVER STATE
-    ===================================================== */
-
-    .nav-links a:hover {
-
-        color:
-            #ffffff;
-
-        background:
-            rgba(0, 245, 255, .045);
-
-        border-color:
-            rgba(0, 245, 255, .30);
-
-        box-shadow:
-            0 0 16px rgba(0, 245, 255, .10),
-            inset 0 0 18px rgba(0, 245, 255, .025);
-
-        transform:
-            translateY(-2px);
-    }
-
-
-    /* =====================================================
-       ACTIVE NAVIGATION ITEM
-    ===================================================== */
-
-    .nav-links a.active {
-
-        color:
-            #ffffff;
-
-        background:
-            rgba(0, 245, 255, .065);
-
-        border-color:
-            rgba(0, 245, 255, .38);
-
-        box-shadow:
-            0 0 18px rgba(0, 245, 255, .13),
-            inset 0 0 18px rgba(0, 245, 255, .035);
-    }
-
-
-    .nav-links a.active::after {
-
-        height: 60%;
-    }
-
-
-    .nav-links a:last-child {
-
-        margin-bottom: 0;
-    }
-
-}
-
-
-/* =========================================================
-   ABOUT
-========================================================= */
-
-@media (max-width: 900px) {
-
-    .about-container {
-
-        grid-template-columns: 1fr;
-
-        text-align: center;
-    }
-
-
-    .stats {
-
-        grid-template-columns:
-            repeat(2, 1fr);
-    }
-}
-
-
-/* =========================================================
-   SKILLS
-========================================================= */
-
-@media (max-width: 1100px) {
-
-    .skills-grid {
-
-        grid-template-columns:
-            repeat(2, 1fr);
-    }
-}
-
-
-@media (max-width: 768px) {
-
-    .skills {
-
-        padding:
-            90px 6%;
-    }
-
-
-    .skills-grid {
-
-        grid-template-columns:
-            1fr;
-    }
-
-
-    .section-title h2 {
-
-        font-size:
-            38px;
-    }
-
-
-    .skill-card {
-
-        padding:
-            28px;
-    }
-
-
-    .skill-card h3 {
-
-        font-size:
-            21px;
-    }
-
-
-    .skill-list span {
-
-        font-size:
-            14px;
-
-        padding:
-            8px 15px;
-    }
-}
-
-
-/* =========================================================
-   PROJECTS
-========================================================= */
-
-@media (max-width: 900px) {
-
-    .projects-grid {
-
-        grid-template-columns:
-            1fr;
-    }
-}
-
-
-/* =========================================================
-   JOURNEY / TIMELINE
-========================================================= */
-
-@media (max-width: 900px) {
-
-    .timeline::before {
-
-        left:
-            25px;
-    }
-
-
-    .timeline-item,
-    .timeline-item:nth-child(even) {
-
-        justify-content:
-            flex-start;
-
-        padding-left:
-            60px;
-    }
-
-
-    .timeline-content {
-
-        width:
-            100%;
-    }
-
-
-    .timeline-dot {
-
-        left:
-            25px;
-    }
-}
-
-
-/* =========================================================
-   CERTIFICATIONS
-========================================================= */
-
-@media (max-width: 900px) {
-
-    .certificate-grid {
-
-        grid-template-columns:
-            1fr;
-    }
-}
-
-
-/* =========================================================
-   EDUCATION
-========================================================= */
-
-@media (max-width: 992px) {
-
-    .education-grid {
-
-        grid-template-columns:
-            1fr;
-    }
-}
-
-
-/* =========================================================
-   EXPERIENCE
-========================================================= */
-
-@media (max-width: 768px) {
 
     .experience-header {
 
-        flex-direction:
-            column;
+        flex-direction: column;
+
+        gap: 12px;
+
+        min-width: 0;
+    }
+
+    .experience-header h3 {
+        font-size: 20px;
+
+        min-width: 0;
+    }
+
+    .experience-content li {
+
+        font-size: 13px;
+
+        white-space: normal;
+        word-break: normal;
+        overflow-wrap: normal;
     }
 
 
-    .experience-duration {
+    /* =====================================================
+       JOURNEY — IMPORTANT FIX
+    ===================================================== */
 
-        text-align:
-            left;
+    .journey-item {
+
+        /*
+         * The third column MUST be allowed to grow.
+         * minmax(0, 1fr) alone is not enough if a parent
+         * or child has a restrictive min-width.
+         */
+
+        display: grid;
+
+        grid-template-columns:
+            55px
+            20px
+            minmax(0, 1fr);
+
+        column-gap: 12px;
+
+        row-gap: 8px;
+
+        width: 100%;
+
+        max-width: 100%;
+
+        min-width: 0;
+
+        box-sizing: border-box;
     }
-}
 
 
-/* =========================================================
-   CONTACT
-========================================================= */
+    /*
+     * Every direct child of the Journey grid is
+     * prevented from forcing the third column smaller.
+     */
 
-@media (max-width: 768px) {
+    .journey-item > * {
+
+        min-width: 0;
+
+        max-width: 100%;
+
+        box-sizing: border-box;
+    }
+
+
+    /*
+     * This is especially important if your HTML has
+     * .journey-content / .journey-info / .journey-details.
+     */
+
+    .journey-content,
+    .journey-info,
+    .journey-details,
+    .journey-text {
+
+        min-width: 0 !important;
+
+        width: 100% !important;
+
+        max-width: none !important;
+
+        box-sizing: border-box;
+    }
+
+
+    /*
+     * FORCE NORMAL SENTENCE FLOW
+     */
+
+    .journey-item p,
+    .journey-item h3 {
+
+        display: block !important;
+
+        width: auto !important;
+
+        max-width: none !important;
+
+        min-width: 0 !important;
+
+        white-space: normal !important;
+
+        word-break: normal !important;
+
+        overflow-wrap: normal !important;
+
+        word-wrap: normal !important;
+
+        hyphens: none !important;
+
+        letter-spacing: normal;
+
+        writing-mode: horizontal-tb !important;
+
+        text-orientation: mixed !important;
+    }
+
+
+    .journey-item p {
+
+        font-size: 13px;
+
+        line-height: 1.75;
+
+        margin-top: 8px;
+    }
+
+
+    .journey-item h3 {
+
+        font-size: 18px;
+
+        line-height: 1.35;
+
+        margin: 0;
+    }
+
+
+    .journey-year {
+
+        font-size: 12px;
+
+        white-space: nowrap;
+
+        min-width: 0;
+    }
+
+
+    /* EDUCATION */
+
+    .education-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .education-card:last-child {
+        grid-column: auto;
+    }
+
+    .education-card {
+        padding: 23px;
+
+        min-width: 0;
+    }
+
+
+    /* CERTIFICATIONS */
+
+    .certification-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .certification-card {
+
+        min-height: auto;
+
+        padding: 23px;
+
+        min-width: 0;
+    }
+
+    .certification-card h3 {
+        font-size: 18px;
+    }
+
+
+    /* VOLUNTARY */
+
+    .voluntary-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .voluntary-card {
+        padding: 23px;
+
+        min-width: 0;
+    }
+
+
+    /* CONTACT */
 
     .contact {
-
-        padding:
-            90px 6%;
+        padding-bottom: 80px;
     }
 
-
-    .contact-card {
-
-        padding:
-            28px;
+    .contact-wrapper {
+        gap: 42px;
     }
 
-
-    .contact-card h3 {
+    .contact-content h2 {
 
         font-size:
-            20px;
+            clamp(
+                34px,
+                8vw,
+                46px
+            );
+    }
+
+    .contact-content > p {
+
+        font-size: 14px;
+
+        white-space: normal;
+        word-break: normal;
+        overflow-wrap: normal;
     }
 
 
-    .input-row {
+    /* CONTACT FORM */
 
-        grid-template-columns:
-            1fr;
+    .contact-form-wrapper {
+
+        padding: 25px;
+
+        border-radius: 20px;
+
+        min-width: 0;
+    }
+
+    .form-heading h3 {
+        font-size: 24px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* POPUP */
+
+    .contact-popup {
+
+        right: 15px;
+
+        bottom: 15px;
+
+        width: calc(100vw - 30px);
+
+        max-width: 420px;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        padding-top: 40px;
+    }
+
+    .footer-container {
+
+        grid-template-columns: 1fr;
+
+        gap: 28px;
+    }
+
+    .footer-bottom {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 8px;
     }
 }
 
 
 /* =========================================================
-   STATS
+   MOBILE — 600px
 ========================================================= */
 
 @media (max-width: 600px) {
 
-    .stats {
+    .brand-mark {
+
+        width: 35px;
+        height: 35px;
+
+        border-radius: 9px;
+
+        font-size: 11px;
+    }
+
+    .brand-name {
+
+        font-size: 11px;
+
+        letter-spacing: 0.06em;
+    }
+
+
+    /* HERO */
+
+    .hero {
+
+        padding:
+            98px 0
+            60px;
+    }
+
+    .hero h1 {
+
+        font-size:
+            clamp(
+                39px,
+                12vw,
+                52px
+            );
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+
+    /* BUTTONS */
+
+    .hero-actions {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+    }
+
+
+    /* HERO VISUAL */
+
+    .hero-visual {
+        min-height: 350px;
+    }
+
+    .data-card {
+
+        padding: 18px;
+
+        border-radius: 18px;
+    }
+
+    .data-card-label {
+        font-size: 9px;
+    }
+
+    .data-card h3 {
+        font-size: 17px;
+    }
+
+    .data-card-icon {
+
+        width: 34px;
+        height: 34px;
+
+        font-size: 14px;
+    }
+
+    .analytics-visual {
+
+        height: 175px;
+
+        padding: 15px;
+
+        border-radius: 13px;
+    }
+
+    .chart-bars {
+
+        left: 20px;
+
+        right: 20px;
+
+        bottom: 15px;
+
+        height: 135px;
+
+        gap: 7px;
+    }
+
+
+    /* FLOATING CARDS */
+
+    .floating-card {
+
+        max-width: 155px;
+
+        padding:
+            8px
+            10px;
+
+        gap: 8px;
+    }
+
+    .floating-card-one {
+
+        top: 18px;
+
+        left: -4px;
+    }
+
+    .floating-card-two {
+
+        right: -4px;
+
+        bottom: 20px;
+    }
+
+    .floating-icon {
+
+        width: 27px;
+        height: 27px;
+
+        font-size: 9px;
+    }
+
+    .floating-card strong {
+        font-size: 10px;
+    }
+
+    .floating-card small {
+        font-size: 8px;
+    }
+
+
+    /* DATA CARD FOOTER */
+
+    .data-card-footer {
 
         grid-template-columns:
-            1fr;
+            repeat(
+                3,
+                minmax(0,1fr)
+            );
+
+        gap: 6px;
+
+        margin-top: 18px;
+
+        padding-top: 17px;
+    }
+
+    .data-card-footer strong {
+        font-size: 17px;
+    }
+
+    .data-card-footer span {
+        font-size: 8px;
     }
 
 
-    .section-title h2 {
+    /* SECTION */
 
-        font-size:
-            34px;
+    .section {
+        padding: 62px 0;
+    }
+
+    .section-heading {
+        margin-bottom: 35px;
+    }
+
+    .section-heading h2 {
+        font-size: 32px;
+    }
+
+    .section-heading p {
+
+        font-size: 13px;
+
+        white-space: normal;
+        word-break: normal;
+        overflow-wrap: normal;
+    }
+
+
+    /* ABOUT */
+
+    .profile-panel {
+
+        padding: 18px;
+
+        border-radius: 16px;
+    }
+
+    .profile-image-wrapper {
+        border-radius: 13px;
+    }
+
+    .about-content .about-lead {
+        font-size: 16px;
+    }
+
+
+    /* STATS */
+
+    .stats-grid {
+        gap: 9px;
+    }
+
+    .stat-item {
+
+        min-height: 95px;
+
+        padding:
+            15px
+            11px;
+    }
+
+    .stat-item strong {
+        font-size: 22px;
+    }
+
+    .stat-item span {
+        font-size: 9px;
+    }
+
+
+    /* CARDS */
+
+    .expertise-card,
+    .project-card,
+    .experience-content,
+    .education-card,
+    .certification-card,
+    .voluntary-card {
+
+        border-radius: 14px;
+
+        min-width: 0;
+    }
+
+
+    /* PROJECTS */
+
+    .project-card {
+        padding: 20px;
+    }
+
+    .project-top {
+        margin-bottom: 22px;
+    }
+
+    .project-content h3 {
+        font-size: 18px;
+    }
+
+    .project-content p {
+
+        font-size: 12px;
+
+        white-space: normal;
+        word-break: normal;
+        overflow-wrap: normal;
+    }
+
+    .project-tech span {
+
+        font-size: 9px;
+
+        padding:
+            5px
+            8px;
+
+        white-space: nowrap;
+    }
+
+    .project-links {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 9px;
+    }
+
+    .project-link {
+
+        width: 100%;
+
+        justify-content: center;
+
+        padding: 9px;
+
+        border-radius: 8px;
+
+        background: var(--surface-soft);
+    }
+
+
+    /* EXPERIENCE */
+
+    .experience-content {
+        padding: 19px;
+    }
+
+    .experience-header h3 {
+        font-size: 18px;
+    }
+
+    .experience-content li {
+
+        font-size: 12px;
+
+        white-space: normal;
+        word-break: normal;
+        overflow-wrap: normal;
+    }
+
+
+    /* =====================================================
+       JOURNEY — MOBILE FIX
+    ===================================================== */
+
+    .journey-item {
+
+        grid-template-columns:
+            45px
+            18px
+            minmax(0, 1fr);
+
+        column-gap: 10px;
+
+        row-gap: 7px;
+
+        width: 100%;
+
+        min-width: 0;
+
+        max-width: 100%;
+    }
+
+
+    .journey-item > * {
+
+        min-width: 0;
+
+        max-width: 100%;
+    }
+
+
+    .journey-content,
+    .journey-info,
+    .journey-details,
+    .journey-text {
+
+        min-width: 0 !important;
+
+        width: 100% !important;
+
+        max-width: none !important;
+    }
+
+
+    .journey-item h3 {
+
+        display: block !important;
+
+        width: auto !important;
+
+        min-width: 0 !important;
+
+        max-width: none !important;
+
+        font-size: 16px;
+
+        line-height: 1.35;
+
+        white-space: normal !important;
+
+        word-break: normal !important;
+
+        overflow-wrap: normal !important;
+
+        word-wrap: normal !important;
+
+        hyphens: none !important;
+    }
+
+
+    .journey-item p {
+
+        display: block !important;
+
+        width: auto !important;
+
+        min-width: 0 !important;
+
+        max-width: none !important;
+
+        font-size: 12px;
+
+        line-height: 1.7;
+
+        white-space: normal !important;
+
+        word-break: normal !important;
+
+        overflow-wrap: normal !important;
+
+        word-wrap: normal !important;
+
+        hyphens: none !important;
+    }
+
+
+    .journey-year {
+
+        font-size: 10px;
+
+        white-space: nowrap !important;
+    }
+
+
+    /* EDUCATION */
+
+    .education-card {
+        padding: 19px;
+    }
+
+    .education-top {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+    .education-card h3 {
+        font-size: 18px;
+    }
+
+    .education-card h4 {
+        font-size: 12px;
+    }
+
+    .education-result strong {
+        font-size: 25px;
+    }
+
+
+    /* CERTIFICATIONS */
+
+    .certification-card {
+        padding: 20px;
+    }
+
+    .certification-number {
+
+        top: 17px;
+
+        right: 18px;
+
+        font-size: 30px;
+    }
+
+    .certification-card h3 {
+
+        margin-top: 25px;
+
+        font-size: 17px;
+    }
+
+
+    /* CONTACT */
+
+    .contact-form-wrapper {
+        padding: 20px;
+    }
+
+    .form-heading {
+        margin-bottom: 22px;
+    }
+
+    .form-heading h3 {
+        font-size: 21px;
+    }
+
+    .contact-form {
+        gap: 15px;
+    }
+
+
+    /* POPUP */
+
+    .contact-popup {
+
+        padding: 12px;
+
+        gap: 9px;
+
+        border-radius: 12px;
+    }
+
+    .popup-icon {
+
+        width: 34px;
+        height: 34px;
+    }
+
+
+    /* FOOTER */
+
+    .footer-container {
+        gap: 23px;
+    }
+
+    .footer-bottom {
+        font-size: 9px;
     }
 }
 
 
 /* =========================================================
-   TRANSMISSION POPUP
+   SMALL PHONES — 450px
 ========================================================= */
 
-@media (max-width: 600px) {
+@media (max-width: 450px) {
 
-    #transmission-popup {
-
-        top:
-            20px;
-
-        left:
-            20px;
-
-        right:
-            20px;
-
-        width:
-            auto;
-
-        transform:
-            translateY(-150px);
+    .navbar {
+        width: 92%;
     }
 
 
-    #transmission-popup.show {
+    /* BRAND */
 
-        transform:
-            translateY(0);
+    .brand {
+        gap: 8px;
     }
 
+    .brand-mark {
 
-    .transmission-header {
+        width: 32px;
+        height: 32px;
 
-        font-size:
-            9px;
+        font-size: 10px;
     }
 
-
-    .transmission-body {
-
-        padding:
-            20px 16px;
+    .brand-name {
+        font-size: 10px;
     }
-}
-
-
-/* =========================================================
-   SMALL PHONES
-========================================================= */
-
-@media (max-width: 500px) {
-
-    .nav-links {
-
-        top:
-            75px;
-
-        left:
-            4%;
-
-        width:
-            92%;
-
-        padding:
-            17px;
-
-        border-radius:
-            20px;
-    }
-
-
-    .nav-links a {
-
-        padding:
-            14px 16px;
-
-        font-size:
-            14px;
-    }
-
 
     .hamburger {
 
-        width:
-            44px;
-
-        height:
-            44px;
+        width: 38px;
+        height: 38px;
     }
 
 
-    .hamburger span {
+    /* HERO */
 
-        width:
-            20px;
+    .hero {
+
+        padding:
+            94px 0
+            55px;
+    }
+
+    .hero h1 {
+
+        font-size:
+            clamp(
+                35px,
+                12vw,
+                46px
+            );
+    }
+
+    .hero-eyebrow {
+        font-size: 9px;
+    }
+
+    .hero-description {
+        font-size: 13px;
+    }
+
+
+    /* HERO VISUAL */
+
+    .hero-visual {
+        min-height: 325px;
+    }
+
+    .data-card {
+        padding: 15px;
+    }
+
+    .analytics-visual {
+        height: 155px;
+    }
+
+    .chart-bars {
+        height: 115px;
+    }
+
+
+    /* DATA CARD FOOTER */
+
+    .data-card-footer {
+
+        grid-template-columns: 1fr;
+
+        gap: 8px;
+    }
+
+    .data-card-footer > div {
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        gap: 10px;
+    }
+
+
+    /* FLOATING CARDS */
+
+    .floating-card {
+
+        max-width: 135px;
+
+        padding:
+            7px
+            8px;
+    }
+
+    .floating-card-one {
+        left: -3px;
+    }
+
+    .floating-card-two {
+        right: -3px;
+    }
+
+
+    /* SECTION */
+
+    .section {
+        padding: 55px 0;
+    }
+
+    .section-container {
+        width: 92%;
+    }
+
+    .section-heading h2 {
+        font-size: 29px;
+    }
+
+
+    /* STATS */
+
+    .stats-grid {
+
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0,1fr)
+            );
+    }
+
+    .stat-item {
+        padding: 14px 9px;
+    }
+
+    .stat-item strong {
+        font-size: 20px;
+    }
+
+
+    /* EXPERTISE */
+
+    .expertise-card {
+        padding: 19px;
+    }
+
+    .expertise-card h3 {
+        font-size: 17px;
+    }
+
+    .expertise-card > p {
+
+        font-size: 12px;
+
+        white-space: normal;
+        word-break: normal;
+        overflow-wrap: normal;
+    }
+
+
+    /* TECHNOLOGY */
+
+    .technology-stack {
+        padding: 18px;
+    }
+
+    .technology-list span {
+
+        font-size: 9px;
+
+        padding:
+            6px
+            8px;
+    }
+
+
+    /* PROJECT */
+
+    .project-card {
+        padding: 18px;
+    }
+
+    .project-content h3 {
+        font-size: 17px;
+    }
+
+
+    /* EXPERIENCE */
+
+    .experience-content {
+        padding: 17px;
+    }
+
+    .experience-header h3 {
+        font-size: 17px;
+    }
+
+
+    /* =====================================================
+       JOURNEY — SMALL PHONE
+    ===================================================== */
+
+    .journey-item {
+
+        grid-template-columns:
+            40px
+            14px
+            minmax(0, 1fr);
+
+        column-gap: 8px;
+
+        width: 100%;
+
+        min-width: 0;
+    }
+
+
+    .journey-item > * {
+
+        min-width: 0;
+
+        max-width: 100%;
+    }
+
+
+    .journey-content,
+    .journey-info,
+    .journey-details,
+    .journey-text {
+
+        min-width: 0 !important;
+
+        width: 100% !important;
+
+        max-width: none !important;
+    }
+
+
+    .journey-item h3 {
+
+        font-size: 15px;
+
+        line-height: 1.4;
+
+        white-space: normal !important;
+
+        word-break: normal !important;
+
+        overflow-wrap: normal !important;
+
+        word-wrap: normal !important;
+    }
+
+
+    .journey-item p {
+
+        font-size: 11px;
+
+        line-height: 1.7;
+
+        white-space: normal !important;
+
+        word-break: normal !important;
+
+        overflow-wrap: normal !important;
+
+        word-wrap: normal !important;
+
+        hyphens: none !important;
+    }
+
+
+    .journey-year {
+
+        font-size: 9px;
+
+        white-space: nowrap !important;
+    }
+
+
+    /* CONTACT */
+
+    .contact-content h2 {
+        font-size: 29px;
+    }
+
+    .contact-content > p {
+        font-size: 13px;
+    }
+
+    .contact-form-wrapper {
+        padding: 17px;
+    }
+
+
+    /* FOOTER */
+
+    .footer-brand p {
+        font-size: 11px;
+    }
+}
+
+
+/* =========================================================
+   EXTRA SMALL PHONES — 360px
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .navbar {
+        width: 94%;
+    }
+
+    .brand-name {
+        font-size: 9px;
+    }
+
+    .brand-mark {
+
+        width: 30px;
+        height: 30px;
+    }
+
+    .hamburger {
+
+        width: 36px;
+        height: 36px;
+    }
+
+
+    /* HERO */
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero-description {
+        font-size: 12px;
+    }
+
+
+    /* BUTTONS */
+
+    .btn {
+
+        min-height: 44px;
+
+        padding:
+            0
+            14px;
+
+        font-size: 11px;
+    }
+
+
+    /* DATA CARD */
+
+    .hero-visual {
+        min-height: 300px;
+    }
+
+    .data-card {
+        padding: 13px;
+    }
+
+    .data-card-header h3 {
+        font-size: 15px;
+    }
+
+    .analytics-visual {
+        height: 140px;
+    }
+
+    .chart-bars {
+        height: 105px;
+    }
+
+
+    /* FLOATING CARDS */
+
+    .floating-card {
+        display: none;
+    }
+
+
+    /* SECTION */
+
+    .section-heading h2 {
+        font-size: 27px;
+    }
+
+
+    /* STATS */
+
+    .stat-item {
+
+        min-height: 88px;
+
+        padding:
+            12px
+            7px;
+    }
+
+    .stat-item strong {
+        font-size: 18px;
+    }
+
+    .stat-item span {
+        font-size: 8px;
+    }
+
+
+    /* CARDS */
+
+    .expertise-card,
+    .project-card,
+    .experience-content,
+    .education-card,
+    .certification-card,
+    .voluntary-card {
+
+        padding: 16px;
+
+        min-width: 0;
+    }
+
+
+    /* =====================================================
+       JOURNEY — 360px
+    ===================================================== */
+
+    .journey-item {
+
+        grid-template-columns:
+            36px
+            12px
+            minmax(0, 1fr);
+
+        column-gap: 7px;
+
+        width: 100%;
+
+        min-width: 0;
+
+        max-width: 100%;
+    }
+
+
+    .journey-item > * {
+
+        min-width: 0 !important;
+
+        max-width: 100% !important;
+    }
+
+
+    .journey-content,
+    .journey-info,
+    .journey-details,
+    .journey-text {
+
+        min-width: 0 !important;
+
+        width: 100% !important;
+
+        max-width: none !important;
+    }
+
+
+    .journey-item h3 {
+
+        font-size: 14px;
+
+        line-height: 1.4;
+
+        white-space: normal !important;
+
+        word-break: normal !important;
+
+        overflow-wrap: normal !important;
+    }
+
+
+    .journey-item p {
+
+        font-size: 10.5px;
+
+        line-height: 1.7;
+
+        white-space: normal !important;
+
+        word-break: normal !important;
+
+        overflow-wrap: normal !important;
+
+        word-wrap: normal !important;
+
+        hyphens: none !important;
+    }
+
+
+    .journey-year {
+
+        font-size: 8px;
+
+        white-space: nowrap !important;
+    }
+
+
+    /* CONTACT */
+
+    .contact-content h2 {
+        font-size: 27px;
+    }
+}
+
+
+/* =========================================================
+   LANDSCAPE MOBILE
+========================================================= */
+
+@media (max-height: 600px) and (orientation: landscape) {
+
+    header {
+        height: 60px;
+    }
+
+    .navbar {
+        height: 60px;
+    }
+
+    .nav-links {
+
+        top: 60px;
+
+        height:
+            calc(
+                100vh - 60px
+            );
+    }
+
+    .hero {
+
+        min-height: auto;
+
+        padding:
+            90px 0
+            50px;
+    }
+
+    .scroll-down {
+        display: none;
+    }
+
+    .hero-visual {
+        min-height: 380px;
+    }
+}
+
+
+/* =========================================================
+   TOUCH DEVICES
+========================================================= */
+
+@media (hover: none) and (pointer: coarse) {
+
+    .expertise-card:hover,
+    .project-card:hover,
+    .certification-card:hover,
+    .education-card:hover,
+    .voluntary-card:hover,
+    .experience-content:hover {
+
+        transform: none;
+    }
+
+    .btn:hover {
+        transform: none;
+    }
+
+    .nav-links a:hover {
+        transform: none;
+    }
+
+
+    .expertise-card,
+    .project-card,
+    .education-card,
+    .certification-card,
+    .voluntary-card {
+
+        transition:
+            box-shadow 0.25s ease,
+            border-color 0.25s ease;
+    }
+
+
+    .nav-links a,
+    .btn,
+    .project-link,
+    .hamburger {
+
+        -webkit-tap-highlight-color:
+            transparent;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto !important;
+    }
+
+    *,
+    *::before,
+    *::after {
+
+        animation-duration:
+            0.01ms !important;
+
+        animation-iteration-count:
+            1 !important;
+
+        transition-duration:
+            0.01ms !important;
+    }
+
+    .reveal,
+    .fade-right,
+    .fade-left,
+    .scale-in {
+
+        opacity: 1 !important;
+
+        transform: none !important;
+    }
+
+    .floating-card,
+    .hero-orb,
+    .data-card,
+    .analytics-visual {
+
+        animation: none !important;
+    }
+}
+
+
+/* =========================================================
+   PRINT
+========================================================= */
+
+@media print {
+
+    header,
+    .hamburger,
+    .hero-actions,
+    .scroll-down,
+    .contact-popup,
+    #transmission-popup,
+    footer {
+
+        display: none !important;
+    }
+
+    body {
+
+        background:
+            #ffffff !important;
+
+        color:
+            #111827 !important;
+    }
+
+    .hero {
+
+        min-height: auto;
+
+        padding:
+            30px 0;
+    }
+
+    .section {
+
+        padding:
+            30px 0;
+
+        page-break-inside:
+            avoid;
+    }
+
+    .project-card,
+    .expertise-card,
+    .experience-content,
+    .education-card,
+    .certification-card,
+    .voluntary-card,
+    .contact-form-wrapper {
+
+        box-shadow:
+            none !important;
+
+        border:
+            1px solid
+            #d1d5db !important;
+    }
+
+
+    .gradient-text,
+    .hero h1,
+    .section-heading h2 {
+
+        -webkit-print-color-adjust:
+            exact;
+
+        print-color-adjust:
+            exact;
     }
 }
