@@ -7627,3 +7627,195 @@ body.menu-open {
     }
 
 }
+
+/* =========================================================
+   PREMIUM SMOOTHNESS PASS
+   Visual/interaction polish only — no functionality changes.
+========================================================= */
+
+:root {
+    --motion-premium: cubic-bezier(.16, 1, .3, 1);
+    --motion-smooth: cubic-bezier(.22, 1, .36, 1);
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    overscroll-behavior-y: none;
+}
+
+/* Keep reveal movement subtle: smoothness comes from easing, not distance. */
+.reveal {
+    opacity: 0;
+    transform: translate3d(0, 22px, 0);
+    filter: none;
+    will-change: opacity, transform;
+    transition:
+        opacity 900ms var(--motion-premium),
+        transform 900ms var(--motion-premium);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    will-change: auto;
+}
+
+.fade-right {
+    opacity: 0;
+    transform: translate3d(-22px, 0, 0);
+    filter: none;
+    will-change: opacity, transform;
+    transition:
+        opacity 850ms var(--motion-premium),
+        transform 850ms var(--motion-premium);
+}
+
+.fade-right.show {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    will-change: auto;
+}
+
+/* Deliberate, soft stagger — never a jerky cascade. */
+.expertise-card:nth-child(2),
+.project-card:nth-child(2),
+.education-card:nth-child(2),
+.certification-card:nth-child(2),
+.voluntary-card:nth-child(2) { transition-delay: 90ms; }
+
+.expertise-card:nth-child(3),
+.project-card:nth-child(3),
+.education-card:nth-child(3),
+.certification-card:nth-child(3),
+.voluntary-card:nth-child(3) { transition-delay: 180ms; }
+
+.expertise-card:nth-child(4),
+.project-card:nth-child(4),
+.certification-card:nth-child(4) { transition-delay: 270ms; }
+
+/* Premium hover: small movement, long easing, no snapping. */
+.project-card,
+.expertise-card,
+.education-card,
+.certification-card,
+.voluntary-card {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transition:
+        transform 520ms var(--motion-premium),
+        box-shadow 520ms var(--motion-premium),
+        border-color 420ms ease,
+        background-color 420ms ease;
+}
+
+.project-card:hover,
+.expertise-card:hover,
+.education-card:hover,
+.certification-card:hover,
+.voluntary-card:hover {
+    transform: translate3d(0, -6px, 0);
+}
+
+.btn,
+.nav-resume,
+.nav-links a,
+.brand,
+.social-link,
+.filter-btn,
+.hamburger {
+    transition:
+        transform 420ms var(--motion-premium),
+        color 300ms ease,
+        background 420ms ease,
+        box-shadow 420ms var(--motion-premium),
+        border-color 350ms ease,
+        opacity 300ms ease;
+}
+
+.btn:hover,
+.nav-resume:hover {
+    transform: translate3d(0, -2px, 0);
+}
+
+header {
+    transition:
+        background-color 450ms ease,
+        box-shadow 550ms var(--motion-premium),
+        backdrop-filter 450ms ease;
+}
+
+/* Loader stays for the full 2 seconds, then exits gently. */
+#loader {
+    will-change: opacity, transform;
+}
+
+#loader.loader-complete {
+    opacity: 0;
+    transform: scale(1.012);
+    pointer-events: none;
+    visibility: hidden;
+    transition:
+        opacity 750ms var(--motion-premium),
+        transform 850ms var(--motion-premium),
+        visibility 0s linear 850ms;
+}
+
+.loader-progress {
+    transition: width 80ms linear;
+}
+
+/* Subtle image/media settling instead of abrupt hover scaling. */
+.project-card img,
+.profile-image img,
+.certification-card img,
+.education-card img {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transition: transform 700ms var(--motion-premium), filter 500ms ease;
+}
+
+.project-card:hover img,
+.profile-image:hover img,
+.certification-card:hover img,
+.education-card:hover img {
+    transform: scale(1.025);
+}
+
+/* Avoid layout shifts while sections are entering. */
+main,
+section {
+    overflow-x: clip;
+}
+
+@media (hover: none) {
+    .project-card:hover,
+    .expertise-card:hover,
+    .education-card:hover,
+    .certification-card:hover,
+    .voluntary-card:hover,
+    .btn:hover,
+    .nav-resume:hover {
+        transform: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto !important; }
+    *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+    }
+    .reveal,
+    .fade-right {
+        opacity: 1 !important;
+        transform: none !important;
+        filter: none !important;
+    }
+}

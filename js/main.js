@@ -105,11 +105,8 @@ function finishLoader() {
     body.classList.add("loaded");
 
     setTimeout(() => {
-
         loader.style.display = "none";
-
-    }, 700);
-
+    }, 750);
 }
 
 
@@ -119,195 +116,70 @@ function startLoader() {
         return;
     }
 
-
-    /*
-        If reduced motion is enabled,
-        show the portfolio almost immediately.
-    */
-
-    if (prefersReducedMotion) {
-
-        if (loaderProgress) {
-            loaderProgress.style.width = "100%";
-        }
-
-        if (loaderPercent) {
-            loaderPercent.textContent = "100%";
-        }
-
-        if (loaderText) {
-            loaderText.textContent = "Welcome.";
-        }
-
-        setTimeout(
-            finishLoader,
-            300
-        );
-
-        return;
-
-    }
-
-
+    /* Keep the original 2-second loading experience. */
+    const loaderStart = performance.now();
     let progress = 0;
+    let finished = false;
 
     const messages = [
-
-        {
-            limit: 15,
-            text: "Initializing Portfolio..."
-        },
-
-        {
-            limit: 30,
-            text: "Preparing Interface..."
-        },
-
-        {
-            limit: 45,
-            text: "Loading Projects..."
-        },
-
-        {
-            limit: 60,
-            text: "Loading Skills..."
-        },
-
-        {
-            limit: 80,
-            text: "Preparing Experience..."
-        },
-
-        {
-            limit: 95,
-            text: "Establishing Connection..."
-        },
-
-        {
-            limit: 100,
-            text: "Welcome."
-        }
-
+        { limit: 15, text: "Initializing Portfolio..." },
+        { limit: 30, text: "Preparing Interface..." },
+        { limit: 45, text: "Loading Projects..." },
+        { limit: 60, text: "Loading Skills..." },
+        { limit: 80, text: "Preparing Experience..." },
+        { limit: 95, text: "Establishing Connection..." },
+        { limit: 100, text: "Welcome." }
     ];
 
+    const update = () => {
+        const elapsed = performance.now() - loaderStart;
+        const ratio = Math.min(elapsed / 2000, 1);
 
-    const updateProgress = () => {
-
-        progress += 2;
-
-        if (progress > 100) {
-            progress = 100;
-        }
-
+        /* Smooth progress rather than a visibly ticking bar. */
+        const eased = 1 - Math.pow(1 - ratio, 2.2);
+        progress = Math.min(100, Math.round(eased * 100));
 
         if (loaderProgress) {
-
-            loaderProgress.style.width =
-                `${progress}%`;
-
+            loaderProgress.style.width = `${progress}%`;
         }
-
 
         if (loaderPercent) {
-
-            loaderPercent.textContent =
-                `${progress}%`;
-
+            loaderPercent.textContent = `${progress}%`;
         }
-
 
         if (loaderText) {
-
-            const currentMessage =
-                messages.find(
-                    item =>
-                        progress <= item.limit
-                );
-
+            const currentMessage = messages.find(item => progress <= item.limit);
             if (currentMessage) {
-
-                loaderText.textContent =
-                    currentMessage.text;
-
+                loaderText.textContent = currentMessage.text;
             }
-
         }
 
-
-        if (progress >= 100) {
-
-            clearInterval(loaderTimer);
-
-            /*
-                Short finishing delay.
-                No unnecessary 2–5 second wait.
-            */
-
-            setTimeout(
-                finishLoader,
-                250
-            );
-
+        if (ratio < 1) {
+            requestAnimationFrame(update);
+            return;
         }
 
+        if (!finished) {
+            finished = true;
+            finishLoader();
+        }
     };
 
-
-    const loaderTimer =
-        setInterval(
-            updateProgress,
-            25
-        );
-
+    requestAnimationFrame(update);
 }
 
-
-/*
-    Start loader safely.
-
-    DOM is already placed before this script,
-    but this also works if the script is moved.
-*/
-
-if (
-    document.readyState === "loading"
-) {
-
-    document.addEventListener(
-        "DOMContentLoaded",
-        startLoader,
-        {
-            once: true
-        }
-    );
-
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", startLoader, { once: true });
 } else {
-
     startLoader();
-
 }
 
-
-/*
-    Emergency fallback.
-
-    Even if something unexpected happens,
-    the website MUST NOT remain trapped
-    behind the loader.
-*/
-
+/* Safety net only; it can never shorten the 2-second loader. */
 setTimeout(() => {
-
-    if (
-        loader &&
-        getComputedStyle(loader).display !== "none"
-    ) {
-
+    if (loader && getComputedStyle(loader).display !== "none") {
         finishLoader();
-
     }
-
-}, 5000);
+}, 8000);
 
 
 /* =========================================================
@@ -510,6 +382,36 @@ if (hamburger) {
    SMOOTH SCROLL
 ========================================================= */
 
+function smoothScrollTo(targetPosition, duration = 950) {
+
+    if (prefersReducedMotion) {
+        window.scrollTo(0, targetPosition);
+        return;
+    }
+
+    const startPosition = window.scrollY;
+    const distance = targetPosition - startPosition;
+    const startTime = performance.now();
+
+    /* Smooth ease-in-out: gentle start, fluid middle, soft landing. */
+    const ease = t =>
+        t < 0.5
+            ? 4 * t * t * t
+            : 1 - Math.pow(-2 * t + 2, 3) / 2;
+
+    const step = now => {
+        const progress = Math.min((now - startTime) / duration, 1);
+        window.scrollTo(0, startPosition + distance * ease(progress));
+
+        if (progress < 1) {
+            requestAnimationFrame(step);
+        }
+    };
+
+    requestAnimationFrame(step);
+}
+
+
 navItems.forEach(link => {
 
     link.addEventListener(
@@ -556,24 +458,7 @@ navItems.forEach(link => {
                 15;
 
 
-            if (prefersReducedMotion) {
-
-                window.scrollTo(
-                    0,
-                    targetPosition
-                );
-
-            } else {
-
-                window.scrollTo({
-
-                    top: targetPosition,
-
-                    behavior: "smooth"
-
-                });
-
-            }
+            smoothScrollTo(targetPosition);
 
         }
     );
@@ -1369,62 +1254,12 @@ homeLinks.forEach(link => {
             event.preventDefault();
 
 
-            if (prefersReducedMotion) {
-
-                window.scrollTo(
-                    0,
-                    0
-                );
-
-            } else {
-
-                window.scrollTo({
-
-                    top: 0,
-
-                    behavior: "smooth"
-
-                });
-
-            }
+            smoothScrollTo(0, 1000);
 
         }
     );
 
 });
-
-
-/* =========================================================
-   PREVENT LOADER FROM BLOCKING SCROLL
-========================================================= */
-
-window.addEventListener(
-    "load",
-    () => {
-
-        /*
-            The page is fully loaded.
-            If loader is still visible,
-            finish it immediately.
-        */
-
-        if (
-            loader &&
-            getComputedStyle(loader).display !== "none"
-        ) {
-
-            setTimeout(
-                finishLoader,
-                150
-            );
-
-        }
-
-    },
-    {
-        once: true
-    }
-);
 
 
 /* =========================================================
